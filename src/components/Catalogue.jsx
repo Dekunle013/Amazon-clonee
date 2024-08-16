@@ -14,22 +14,24 @@ function Catalogue() {
         />
       </div>
 
-      <div className="productSectionA">
-        <ProductGrid title="Gaming accessories" items={gamingAccessories} />
-        <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
-        {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
-        <ProductGrid title="Deals in PCs" items={dealsInPCs} />
-        <ProductGrid title="Toys under $25" items={toysUnder25} />
-        {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
-        {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
-        {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
-        <ProductGrid title="Toys under $25" items={toysUnder25} />
+      <section className='firstGrid'>
+        <div className="productSectionA">
+          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
+          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
+          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
+          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
+          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
 
-        <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} />
-        <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} />
-        <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} />
-        <ProductGrid title="Top Deal" items={topDeal} />
-      </div>
+          <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} />
+          <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} />
+          <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} />
+          <ProductGrid title="Top Deal" items={topDeal} />
+        </div>
+      </section>
 
       <div className="landscapeA">
         <div className="headlineA">
