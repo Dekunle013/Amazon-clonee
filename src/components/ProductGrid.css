@@ -1,0 +1,33 @@
+.productsGrid {
+  display: grid;
+  /* flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+  border: 1px solid red;
+  width: 310px;
+  height: 420px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.handpickA {
+  border: 1px solid purple;
+  width: 270px;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.handpickGrid {
+  border: 1px solid black;
+  width: 130px;
+  height: 115px;
+  background-color: lightpink;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

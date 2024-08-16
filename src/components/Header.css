@@ -1,0 +1,438 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 11vh;
+  background-color: #131921;
+}
+
+.leftSection {
+  /* background-color: gray; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 275px;
+  height: 85%;
+  color: #fff;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+.amazonLogo {
+  display: flex;
+  position: static;
+  flex-shrink: 0;
+  width: 120px;
+  height: 40px;
+  margin: 0px 0px 0px 11px;
+  padding: 4px 0px 0px;
+  /* object-fit: cover; */
+}
+
+.delivery {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 5px 2px 5px 0px;
+  padding: 0 9px;
+}
+
+.pinDrop {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+}
+
+.delNigeria {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  /* line-height: 14px; */
+  color: #ccc;
+}
+
+.bold {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.leftSection a:hover {
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  height: inherit;
+  display: flex;
+}
+
+/* end of leftSection */
+
+
+#middleSection {
+  display: flex;
+  flex: 1;
+}
+
+
+#dropdownAll {
+  color: #000;
+  height: 50px;
+  width: 70px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  background-color: #dddddd;
+}
+
+#dropdownAll:hover {
+  background-color: #D4D4D4;
+}
+
+#inputBar {
+  flex-grow: 1;
+  height: 50px;
+  border: none;
+}
+
+#inputBar::placeholder {
+  padding-left: 15px;
+  font-family: 'Amazon Ember', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  background-color: #FEBD69;
+}
+
+#searchIcon {
+  width: 30px;
+  height: 30px;
+}
+
+#rightSection {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 85%;
+  padding: 0px 20px;
+  /* background-color: gray; */
+}
+
+#rightSection a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nationalityHive {
+  /* border: 1px solid green; */
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+  /* background-color: pink; */
+}
+
+.nationality {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: inherit;
+}
+
+.nationality span {
+  font-size: 14px;
+}
+
+.usaFlag {
+  width: 25px;
+  margin-right: 5px;
+}
+
+/* language dropdown stars */
+.dropdownContent {
+  display: none;
+  width: 230px;
+  height: auto;
+  border-radius: 4px;
+  position: absolute;
+  top: 50px;
+  background-color: #fff;
+  z-index: 1;
+  padding: 10px;
+  /* color: auto; */
+}
+
+.contentFloat {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.contentFloat span {
+  display: flex;
+  font-weight: 500;
+}
+
+.changeLang{
+  /* border: 1px solid green; */
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #444444;
+  cursor: pointer;
+}
+
+.learnLang a {
+  /* border: 1px solid green; */
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #007185;
+}
+
+.radioInput {
+  margin-right: 10px;
+}
+
+.eng{
+  border-bottom: 1px solid #ececec;
+  color: #444444;
+  font-size: 13px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  white-space: nowrap;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.contentFloat a span{
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  color: #444444;
+  font-size: 13px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  padding: 8px 0px;
+}
+
+.changeMore {
+  display: flex;
+  padding-top: 10px;
+  border-top: 1px solid #ececec;
+}
+
+.currentCurrency {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ececec;
+  margin-top: 10px;
+}
+
+.currentCurrency span {
+  /* display: flex; */
+  color: #444444;
+  font-size: 13px;
+}
+
+.directive {
+  color: #444444;
+  font-size: 13px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-weight: 400;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.changeCounty {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+}
+
+.changeCounty a {
+  color: #0066C0;
+  font-size: 13px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.changeCounty:hover {
+  text-decoration: underline;
+  text-decoration-color: orange;
+}
+
+.nationalityHive:hover .dropdownContent {
+  display: flex;
+  flex-direction: column;
+}
+/* this is the end of language dropdown */
+
+.accountHolder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  position: relative;
+  color: #fff;
+  /* background-color: lightblue; */
+}
+
+/* account Holder dropdown starts */
+.accountDropdown {
+  border-radius: 4px;
+  position: absolute;
+  top: 47px;
+  right: -130px;
+  width: 590px;
+  height: auto;
+  background-color: #fff;
+  display: none; /* Initially hidden */
+  z-index: 1;
+  padding: 14px 14px 7px;
+}
+
+.accountNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  padding: 0px 120px;
+  border-bottom: 1px solid #EEE;
+}
+
+.accountNavSign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 33px;
+  border-radius: 8px;
+  background-color: #FFD814;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.accountNav div {
+  display: flex;
+  margin: 7px 0px 9px;
+  color: #333333;
+}
+
+.accountNav div span {
+  margin-right: 5px;
+  font-size: 11px;
+}
+
+.accountNav div a {
+  color: #0066C0;
+  font-size: 11px;
+}
+
+.accountSplit {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.splitDivA {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.splitDivB {
+  border-left: 1px solid #EEE;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 50%;
+  height: 100%;
+}
+
+.splitDivA div, .splitDivB div {
+  font-size: 16px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: #0F1111;
+  padding: 0px 0px 10px;
+}
+
+.splitDivA a span, .splitDivB a span {
+  color: #444444;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.splitDivA a, .splitDivB a {
+  padding: 0px 0px 7px;
+}
+/* end of account Holder flyout */
+
+.accountHolder:hover .accountDropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.orders {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  /* background-color: lightpink; */
+}
+
+.cartQuantity {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  /* background-color: lightblue; */
+}
+
+.nationalityHive:hover, .accountHolder:hover, .orders:hover, .cartQuantity:hover {
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+}
