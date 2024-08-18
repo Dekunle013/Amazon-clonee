@@ -7,7 +7,7 @@ function ProductGrid({ title, items }) {
       <div className="headline">
         <h2>{title}</h2>
       </div>
-
+      
       <div className="handpickA">
         {items.map((item, index) => (
           <div className="handpickGrid" key={item.id || index}>

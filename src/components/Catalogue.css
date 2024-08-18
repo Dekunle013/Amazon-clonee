@@ -2,8 +2,8 @@ main {
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -22,18 +22,42 @@ main {
 
 .firstGrid {
   width: 100%;
-  /* height: 50px; */
-  /* overflow: none; */
-  background-color: rgb(102, 8, 8);
-  /* display: grid; */
-
+  /* height: auto; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  background-color: rgb(95, 216, 79);
+  padding: 20px;
 }
 
 .productSectionA {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* background-color: #FFFFFF; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  /* gap: 20px; */
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  /* padding: 20px 0px 15px 0px; */
+  /* margin-top: 50px; */
+  /* position: absolute;
+  top: 0; */
+}
+
+.secondGrid {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(93, 79, 216);
+}
+
+.productSectionB {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 /* .productsGrid {
@@ -57,7 +81,7 @@ main {
 }
 
 .gamePhoto {
-  width: 150px;
+  width: 50px;
   /* width: 100%; */
   /* height: 115px; */
   object-fit: contain;
@@ -144,32 +168,33 @@ h2 {
   text-decoration: none;
 }
 
-/* .handpickA {
+.handpickA {
   border: 1px solid purple;
-  width: 270px;
-  height: 115px;
+  background-color: lightseagreen;
+  width: 500px;
+  height: auto;
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 10px;
   row-gap: 10px;
-} */
+}
 
 /* .handpickGrid {
   border: 1px solid black;
   width: 130px;
   height: 115px;
-  background-color: lightpink;
+  background-color: cyan;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 } */
 
-.quad {
+/* .quad {
   width: 130px;
   height: 115px;
   object-fit: cover;
-}
+} */
 
 /* .tagAnchor {
   color: #000;
@@ -298,11 +323,11 @@ h2 {
 
 /* ladscape after first grid */
 
-.landscapeA, .landscapeB, .landscapeC, .landscapeE,  .landscapeF, .landscapeG {
+.landscape {
   /* border: 1px solid red; */
   width: 97%;
   height: 280px;
-  background-color: #FFFFFF;
+  background-color: #7a1212;
   margin-bottom: 22px;
   display: flex;
   flex-direction: column;
@@ -489,13 +514,13 @@ h2 {
 
 /* This is where third grid layout is */
 
-.productSectionB, .productSectionC {
+/* .productSectionB, .productSectionC {
   display: grid;
   grid-template-columns: auto auto auto auto;
   column-gap: 20px;
-  /* background-color: #FFFFFF; */
-  /* padding: 15px; */
-}
+  background-color: #FFFFFF;
+  padding: 15px;
+} */
 
 .productsGridB {
   display: flex;

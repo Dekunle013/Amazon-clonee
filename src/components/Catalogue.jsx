@@ -29,11 +29,11 @@ function Catalogue() {
           <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} />
           <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} />
           <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} />
-          <ProductGrid title="Top Deal" items={topDeal} />
+          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
         </div>
       </section>
 
-      <div className="landscapeA">
+      <section className="landscape">
         <div className="headlineA">
           <h3>Best Sellers in Sport & Outdoors</h3>
         </div>
@@ -44,9 +44,9 @@ function Catalogue() {
             </a>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="landscapeB">
+      <section className="landscape">
         <div className="headlineA">
           <h3>Best Sellers in Beauty & Personal Care</h3>
         </div>
@@ -57,12 +57,133 @@ function Catalogue() {
             </a>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="productSectionB">
-        <ProductGrid title="Shop activity trackers and smartwatches" items={activityTrackers} />
-        <ProductGrid title="Gaming merchandise" items={gamingMerchandise} />
-      </div>
+      <section className='secondGrid'>
+        <div className="productSectionB">
+          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
+          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
+          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
+          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
+          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
+          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
+
+          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
+          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
+          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
+          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+        </div>
+      </section>
+      
+      <section className="landscape">
+        <div className="headlineA">
+          <h3>Best Sellers in Beauty & Personal Care</h3>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="landscape">
+        <div className="headlineA">
+          <h3>Best Sellers in Beauty & Personal Care</h3>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className='secondGrid'>
+        <div className="productSectionB">
+          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
+          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
+          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
+          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
+          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
+          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
+
+          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
+          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
+          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
+          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+        </div>
+      </section>
+      
+      <section className="landscape">
+        <div className="headlineA">
+          <h3>Best Sellers in Beauty & Personal Care</h3>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="landscape">
+        <div className="headlineA">
+          <h3>Best Sellers in Beauty & Personal Care</h3>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className='secondGrid'>
+        <div className="productSectionB">
+          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
+          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
+          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
+          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
+          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
+          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
+
+          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
+          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
+          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
+          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+        </div>
+      </section>
+
+      <section className="landscape">
+        <div className="headlineA">
+          <h3>Best Sellers in Beauty & Personal Care</h3>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="landscape">
+       
+      </section>
     </main>
   );
 }
