@@ -22,15 +22,9 @@ function Catalogue() {
           {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
           <ProductGrid title="Deals in PCs" items={dealsInPCs} />
           <ProductGrid title="Toys under $25" items={toysUnder25} />
-          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
-          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
-          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
-          <ProductGrid title="Toys under $25" items={toysUnder25} />
-
-          <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} />
-          <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} />
-          <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} />
-          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+          <ProductGrid title="Fashion Trends You Like" items={fashionTrend} />
+          <ProductGrid title="Beauty Steals under $25" items={beautyUnder25} />
+          <ProductGrid title="Home decor under $50" items={decorUnder50} />
         </div>
       </section>
 
@@ -62,20 +56,10 @@ function Catalogue() {
 
       <section className='secondGrid'>
         <div className="productSectionB">
-          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
-          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
-          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
-          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
-          <ProductGrid title="Toys under $25" items={toysUnder25} />
-          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
-          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
-          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
-          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
-
-          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
-          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
-          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
-          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+          <ProductGrid title="Gaming Merchandise" items={gamingMerch} />
+          <ProductGrid title="Shop activity trackers and smartwatches" items={smartWatches} />
+          <ProductGrid title="Warm & welcoming decor" items={welcomeDecor} />
+          <ProductGrid title="Great prices on shoes" items={shoesPrice} />
         </div>
       </section>
       
@@ -214,30 +198,48 @@ const dealsInPCs = [
   { id: 2, title: "Desktop PC", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg" },
 ];
 
-const amazonGadgetStore = [
-  { id: 1, title: "Smartwatch", price: 199.99, image: "smartwatch.jpg" },
-  { id: 2, title: "Bluetooth Speaker", price: 49.99, image: "speaker.jpg" },
-];
-
-const handpickedMusicAudio = [
-  { id: 1, title: "Wireless Earbuds", price: 149.99, image: "earbuds.jpg" },
-  { id: 2, title: "Home Theater System", price: 299.99, image: "home_theater.jpg" },
-];
-
-
-const easterBasket = [
-  { id: 1, title: "Chocolate Bunny", price: 9.99, image: "chocolate_bunny.jpg" },
-  { id: 2, title: "Easter Egg Basket", price: 19.99, image: "egg_basket.jpg" },
-];
-
 const toysUnder25 = [
-  { id: 1, title: "Puzzle Game", price: 14.99, image: "puzzle.jpg" },
-  { id: 2, title: "Toy Car", price: 12.99, image: "toy_car.jpg" },
+  { id: 2, title: "Toys under 25dos", image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v3._SY304_CB573698005_.jpg" },
 ];
 
-const topDeal = [
-  { id: 1, title: "4K TV", price: 499.99, image: "4k_tv.jpg" },
+const fashionTrend = [
+  { id: 1, name: "Dresses", image: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x1._SY116_CB595261253_.jpg" },
+  { id: 2, name: "Knits", image: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x1._SY116_CB595261253_.jpg" },
+  { id: 3, name: "Jackets", image: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x1._SY116_CB595261253_.jpg" },
+  { id: 4, name: "Jewelry", image: "https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x1._SY116_CB595261253_.jpg" },
 ];
+
+const beautyUnder25 = [
+  { id: 2, title: "Desktop PC", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v5._SY304_CB573698005_.jpg" },
+];
+
+const decorUnder50 = [
+  { id: 2, title: "Desktop PC", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v6._SY304_CB573698005_.jpg" },
+];
+
+const gamingMerch = [
+  { id: 1, name: "Dining", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg" },
+  { id: 2, name: "Home", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg" },
+  { id: 3, name: "Kitchen", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg" },
+  { id: 4, name: "Health and Beauty", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg" },
+];
+
+const smartWatches = [
+  { id: 2, title: "Desktop PC", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg" },
+];
+
+const welcomeDecor = [
+  { id: 1, name: "Dining", image: "https://images-na.ssl-images-amazon.com/images/G/01/img18/home/2023/Q2/Homepage/2023Q2_GW_EE_Hallway_D_Quad_186x116._SY116_CB594237035_.jpg" },
+  { id: 2, name: "Outdoor Decor", image: "https://images-na.ssl-images-amazon.com/images/G/01/img18/home/2023/Q2/Homepage/2023Q2_GW_EE_Hallway_D_Quad_186x116._SY116_CB594237035_.jpg" },
+  { id: 3, name: "Kitchen", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg" },
+  { id: 4, name: "Health and Beauty", image: "https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg" },
+];
+
+const shoesPrice = [
+  { id: 2, title: "Desktop PC", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v1._SY304_CB573698005_.jpg" },
+];
+
+
 
 const bestSellersInSportOutdoors = [
   { id: 1, title: "Yoga Mat", price: 29.99, image: "yoga_mat.jpg" },
