@@ -73,24 +73,6 @@ main {
   background-color: #fff;
 } */
 
-.headline {
-  /* border: 1px solid gray; */
-  width: inherit;
-  height: 30px;
-  padding-left: 20px;
-}
-
-.gamePhoto {
-  width: 50px;
-  /* width: 100%; */
-  /* height: 115px; */
-  object-fit: contain;
-}
-
-h2 {
-  font-size: 21px;
-}
-
 .deskTop {
   width: 270px;
   height: 300px;
@@ -153,42 +135,6 @@ h2 {
   height: 30px;
 }
 
-.amazonGadgetLast {
-  /* border: 1px solid violet; */
-  width: 270px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.seeAnchor {
-  color: #007185;
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.handpickA {
-  border: 1px solid purple;
-  background-color: lightseagreen;
-  width: 500px;
-  height: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 10px;
-  row-gap: 10px;
-}
-
-/* .handpickGrid {
-  border: 1px solid black;
-  width: 130px;
-  height: 115px;
-  background-color: cyan;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 /* .quad {
   width: 130px;

@@ -11,11 +11,10 @@ function ProductGrid({ title, items }) {
       <div className="handpickA">
         {items.map((item, index) => (
           <div className="handpickGrid" key={item.id || index}>
-            <img
-              className="gamePhoto"
-              src={item.image}
-              alt={item.alt || 'Product image'}
-            />
+            <div className="imageContainer">
+              <img className='gamePhoto' src={item.image} alt={item.alt || 'Product image'}/>
+            </div>
+            <p className="productName">{item.name}</p>
           </div>
         ))}
       </div>
