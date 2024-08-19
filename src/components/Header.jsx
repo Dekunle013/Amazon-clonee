@@ -25,7 +25,7 @@ function MiddleSection() {
       <button id="dropdownAll">All</button>
       <input id="inputBar" type="text" placeholder="Search Amazon" />
       <button id="searchButton">
-        <img id="searchIcon" src="/public/search.svg" alt="Search Icon" />
+        <img id="searchIcon" src="/search.svg" alt="Search Icon" />
       </button>
     </div>
   );
@@ -40,7 +40,7 @@ function RightSection() {
     <div id="rightSection">
       <div className="nationalityHive">
         <a className="nationality" href="#">
-          <img className="usaFlag" src="public/usa-flag.png" alt="USA" />
+          <img className="usaFlag" src="/usa-flag.png" alt="USA" />
           <span>EN</span>
         </a>
         <DropdownContent onLanguageChange={handleLanguageChange} />
