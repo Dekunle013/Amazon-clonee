@@ -45,6 +45,18 @@ main {
   margin: 0 auto;
 }
 
+.landscape {
+  /* border: 1px solid red; */
+  width: 97%;
+  height: 280px;
+  background-color: #7a1212;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
 /* .productsGrid {
   display: flex;
   flex-direction: column;
@@ -255,17 +267,7 @@ main {
 
 /* ladscape after first grid */
 
-.landscape {
-  /* border: 1px solid red; */
-  width: 97%;
-  height: 280px;
-  background-color: #7a1212;
-  margin-bottom: 22px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 20px;
-}
+
 
 .headlineA {
   /* border: 1px solid blue; */

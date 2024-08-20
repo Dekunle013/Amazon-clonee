@@ -31,12 +31,12 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Sport & Outdoors</h3>
+          <h3>Best Sellers in Home & Kitchen</h3>
         </div>
         <div className="landA">
-          {bestSellersInSportOutdoors.map((item, index) => (
+          {bestSellersInHomeKitchen.map((item, index) => (
             <a href="#" key={index}>
-              <img className="books" src={item.image} alt={item.name || "Sport & Outdoors Item"} />
+              <img className="books" src={item.image} alt={item.name || "Best Sellers in Home & Kitchen"} />
             </a>
           ))}
         </div>
@@ -242,14 +242,16 @@ const shoesPrice = [
 
 
 
-const bestSellersInSportOutdoors = [
-  { id: 1, title: "Yoga Mat", price: 29.99, image: "yoga_mat.jpg" },
-  { id: 2, title: "Dumbbells", price: 39.99, image: "dumbbells.jpg" },
+const bestSellersInHomeKitchen = [
+  { id: 1, title: "Owala FreeSip Insulated Bottle", price: 29.99,image:"https://m.media-amazon.com/images/I/61KePAu1JAL._AC_SY200_.jpg" },
+  { id: 2, title: "Stanley Quencher 2.0 FlowState Stainless Steel", price: 24.99, image: "https://m.media-amazon.com/images/I/51-U5dEbEBL._AC_SY200_.jpg" },
+  { id: 3, title: "Queen Size 4 Piece Sheet Set", price: 24.99, image: "https://m.media-amazon.com/images/I/71g+fxKPtyL._AC_SY200_.jpg" },
+  { id: 4, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71g+fxKPtyL._AC_SY200_.jpg" },
 ];
 
 const bestSellersInBeautyPersonalCare = [
   { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
-  { id: 2, title: "Moisturizer", price: 24.99, image: "moisturizer.jpg" },
+  
 ];
 
 const activityTrackers = [
