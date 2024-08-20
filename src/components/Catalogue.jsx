@@ -2,6 +2,7 @@ import React from 'react';
 import './Catalogue.css';
 import ProductGrid from './ProductGrid';
 import HandpickSection from './HandpickSection';
+import './LandscapeSection.css'
 
 function Catalogue() {
   return (
@@ -43,7 +44,7 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <h3>Best Sellers in Home & Kitchen</h3>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
