@@ -162,13 +162,14 @@ main {
 }
 
 .landA {
-  /* border: 1px solid green; */
-  height: 210px;
+  border: 1px solid green;
+  height: auto;
   width: 100%;
   display: flex;
   /* overflow-x: auto; */
   overflow-y: hidden;
   overflow-x: scroll;
+  margin: 0px 0px 14px;
 }
 
 .landA a {
@@ -182,35 +183,35 @@ main {
 
 
 
-.recentlyViewed {
+/* .recentlyViewed {
   border: 1px solid gray;
   width: 100%;
   height: 120px;
   border-radius: 5px;
   padding-left: 30px;
-}
+} */
 
-.subRecently {
-  /* border: 1px solid cyan; */
+/* .subRecently {
+  border: 1px solid cyan;
   width: 650px;
   height: 65px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 10px;
-}
+} */
 
-.yourRecently {
+/* .yourRecently {
   font-size: 20px;
   font-family: sans-serif;
   font-weight: 300;
   width: 600px;
-}
+} */
 
-.afterView {
+/* .afterView {
   width: 650px;
   font-size: 13px;
   font-family: sans-serif;
   font-style: italic;
   font-weight: 400;
-}
+} */
