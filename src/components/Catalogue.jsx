@@ -44,12 +44,12 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Home & Kitchen</h3>
+          <span>Best Sellers in Sports & Outdoors</span>
         </div>
         <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
+          {bestSellersInSportsAndOutdoors.map((item, index) => (
             <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+              <img src={item.image} alt={item.name || "Sports & Outdoor Item"} />
             </a>
           ))}
         </div>
@@ -66,7 +66,7 @@ function Catalogue() {
       
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <span>Best Sellers in Beauty & Personal Care</span>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
@@ -79,7 +79,7 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <span>Best Sellers in Beauty & Personal Care</span>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
@@ -111,7 +111,7 @@ function Catalogue() {
       
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <span>Best Sellers in Beauty & Personal Care</span>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
@@ -124,7 +124,7 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <span>Best Sellers in Beauty & Personal Care</span>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
@@ -156,7 +156,7 @@ function Catalogue() {
 
       <section className="landscape">
         <div className="headlineA">
-          <h3>Best Sellers in Beauty & Personal Care</h3>
+          <span>Best Sellers in Beauty & Personal Care</span>
         </div>
         <div className="landA">
           {bestSellersInBeautyPersonalCare.map((item, index) => (
@@ -256,19 +256,33 @@ const bestSellersInHomeKitchen = [
   { id: 10, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
 ];
 
+const bestSellersInSportsAndOutdoors = [
+  { id: 1, title: "Owala FreeSip Insulated Bottle", price: 29.99,image:"https://m.media-amazon.com/images/I/61KePAu1JAL._AC_SY200_.jpg" },
+  { id: 2, title: "Stanley Quencher 2.0 FlowState Stainless Steel", price: 24.99, image: "https://m.media-amazon.com/images/I/51-U5dEbEBL._AC_SY200_.jpg" },
+  { id: 3, title: "Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Sheets - Hotel Luxury Bed Sheets for Women &amp; Men - Deep...", price: 24.99, image: "https://m.media-amazon.com/images/I/71g+fxKPtyL._AC_SY200_.jpg" },
+  { id: 4, title: "Amazon Basics Lightweight Super Soft Easy Care Microfiber 4-Piece Bed Sheet Set with 14-Inch Deep Pockets, Queen, Black,...", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  { id: 5, title: "Bedsure Satin Pillowcase for Hair and Skin Queen - Silver Grey Silky Pillowcase 20x30 Inches - Set of 2 with Envelope...", price: 24.99, image: "https://m.media-amazon.com/images/I/71M6a8SHCeL._AC_SY200_.jpg" },
+  { id: 6, title: "Zevo Flying Insect Trap, Fly Trap + Refill Cartridge Pack (1 Plug-in Base + 3 Total Refill Cartridges)", price: 24.99, image: "https://m.media-amazon.com/images/I/71Cj97guaUL._AC_SY200_.jpg" },
+
+  { id: 7, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  { id: 8, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  { id: 9, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  { id: 10, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+];
+
 const bestSellersInBeautyPersonalCare = [
   { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
   
 ];
 
-const activityTrackers = [
-  { id: 1, title: "Fitness Tracker", price: 99.99, image: "fitness_tracker.jpg" },
-];
+// const activityTrackers = [
+//   { id: 1, title: "Fitness Tracker", price: 99.99, image: "fitness_tracker.jpg" },
+// ];
 
-const gamingMerchandise = [
-  { id: 1, title: "T-Shirt", price: 19.99, image: "tshirt.jpg" },
-  { id: 2, title: "Cap", price: 14.99, image: "cap.jpg" },
-];
+// const gamingMerchandise = [
+//   { id: 1, title: "T-Shirt", price: 19.99, image: "tshirt.jpg" },
+//   { id: 2, title: "Cap", price: 14.99, image: "cap.jpg" },
+// ];
 
 
 export default Catalogue;
