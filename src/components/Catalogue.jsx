@@ -12,18 +12,28 @@ function Catalogue() {
       setCurrentWallpaperIndex((prevIndex) => 
         (prevIndex + 1) % wallpapers.length
       );
-    }, 20000); // 20 seconds
+    }, 15000); 
 
     return () => clearInterval(intervalId); // Cleanup on component unmount
   }, []);
+
+  const changeWallpaper = (direction) => {
+    setCurrentWallpaperIndex((prevIndex) => {
+      if (direction === 'next') {
+        return (prevIndex + 1) % wallpapers.length;
+      } else {
+        return prevIndex === 0 ? wallpapers.length - 1 : prevIndex - 1;
+      }
+    });
+  }
 
   return (
     <main>
       <div className="wallpaper">
         <img
           className="backgroundWallpaper"
-          src="https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg"
-          alt="Amazon Background Wallpaper"
+          src={wallpapers[currentWallpaperIndex]}
+          alt={`Amazon Background Wallpaper ${currentWallpaperIndex + 1}`}
         />
       </div>
 
@@ -185,6 +195,17 @@ function Catalogue() {
     </main>
   );
 }
+
+const wallpapers = [
+  "https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/71ve0pYz7uL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/71C-ztbXMCL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/610ZRyRg+jL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg",
+  "https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg",
+  // Add more image URLs as needed
+];
 
 const gamingAccessories = [
   { id: 1, title: "Gaming Headset", price: 59.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg", name: 'Headsets'},
