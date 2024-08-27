@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Catalogue.css';
 import ProductGrid from './ProductGrid';
 import HandpickSection from './HandpickSection';
 import './LandscapeSection.css'
 
 function Catalogue() {
+  const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentWallpaperIndex((prevIndex) => 
+        (prevIndex + 1) % wallpapers.length
+      );
+    }, 20000); // 20 seconds
+
+    return () => clearInterval(intervalId); // Cleanup on component unmount
+  }, []);
+
   return (
     <main>
       <div className="wallpaper">
