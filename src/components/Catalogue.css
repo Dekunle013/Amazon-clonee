@@ -16,7 +16,7 @@ main {
 
 .wallpaper-nav {
   position: absolute;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -85,6 +85,7 @@ main {
 
 .landscape {
   /* border: 1px solid red; */
+  position: relative;
   width: 97%;
   height: auto;
   background-color: #ffffff;
@@ -100,19 +101,6 @@ main {
   position: relative;
   z-index: 3;
 }
-
-/* .productsGrid {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border: 1px solid red;
-  width: 310px;
-  height: 420px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #fff;
-} */
 
 /* ladscape after first grid */
 
@@ -134,14 +122,16 @@ main {
 
 .landA {
   /* border: 1px solid green; */
+  position: relative;
   height: auto;
   width: 100%;
   display: flex;
   /* overflow-x: auto; */
   overflow-y: hidden;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   margin: 0px 0px 14px;
 }
+
 
 .landA a {
   /* border: 1px solid orange; */
@@ -149,6 +139,43 @@ main {
   height: inherit;
   margin-right: 10px;
   text-decoration: none;
+}
+
+.books {
+  /* width: calc(100% / 6); Adjust based on how many items you want to show */
+  height: auto;
+  object-fit: cover;
+}
+
+.landscape-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.landscape:hover .landscape-nav {
+  opacity: 1;
+}
+
+.landscape-nav-left {
+  left: 10px;
+}
+
+.landscape-nav-right {
+  right: 10px;
+}
+
+.landscape-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 

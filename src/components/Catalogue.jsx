@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react';
 import './Catalogue.css';
 import ProductGrid from './ProductGrid';
-import HandpickSection from './HandpickSection';
-import './LandscapeSection.css'
+import './LandscapeSection.css';
 
 function Catalogue() {
   const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
-  const [isHovering, setIsHovering] = useState(false); // Add the isHovering state
+  const [isHovering, setIsHovering] = useState(false);
+  const [isLandscapeHovering, setIsLandscapeHovering] = useState(false);
+  const [landscapeIndex, setLandscapeIndex] = useState(0); // State to track the current index in the landscape section
 
+  // const wallpapers = []; // Add your wallpaper array here
+  const itemsPerPage = 5; // Number of items to display at a time
+  const visibleItems = bestSellersInHomeKitchen.slice(landscapeIndex, landscapeIndex + itemsPerPage);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -27,7 +31,21 @@ function Catalogue() {
         return prevIndex === 0 ? wallpapers.length - 1 : prevIndex - 1;
       }
     });
-  }
+  };
+
+  const changeLandscapeItems = (direction) => {
+    if (direction === 'next') {
+      setLandscapeIndex((prevIndex) => {
+        const newIndex = prevIndex + itemsPerPage;
+        return newIndex >= bestSellersInHomeKitchen.length ? 0 : newIndex;
+      });
+    } else {
+      setLandscapeIndex((prevIndex) => {
+        const newIndex = prevIndex - itemsPerPage;
+        return newIndex < 0 ? bestSellersInHomeKitchen.length - itemsPerPage : newIndex;
+      });
+    }
+  };
 
   return (
     <main>
@@ -58,33 +76,50 @@ function Catalogue() {
           </>
         )}
 
-<section className='firstGrid'>
-        <div className="productSectionA">
-          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
-          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
-          <ProductGrid title="Refresh Your Space" items={refreshYourSpace} />
-          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
-          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
-          <ProductGrid title="Toys under $25" items={toysUnder25} />
-          <ProductGrid title="Fashion Trends You Like" items={fashionTrend} />
-          <ProductGrid title="Beauty Steals under $25" items={beautyUnder25} />
-          <ProductGrid title="Home decor under $50" items={decorUnder50} />
-        </div>
-      </section>
+        <section className='firstGrid'>
+          <div className="productSectionA">
+            <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+            <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+            <ProductGrid title="Refresh Your Space" items={refreshYourSpace} />
+            <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+            <ProductGrid title="Toys under $25" items={toysUnder25} />
+            <ProductGrid title="Fashion Trends You Like" items={fashionTrend} />
+            <ProductGrid title="Beauty Steals under $25" items={beautyUnder25} />
+            <ProductGrid title="Home decor under $50" items={decorUnder50} />
+          </div>
+        </section>
       </div>
 
-      
-
-      <section className="landscape landscape-first">
+      <section 
+        className="landscape landscape-first"
+        onMouseEnter={() => setIsLandscapeHovering(true)}
+        onMouseLeave={() => setIsLandscapeHovering(false)}
+      >
         <div className="headlineA">
           <span>Best Sellers in Home & Kitchen</span>
         </div>
         <div className="landA">
-          {bestSellersInHomeKitchen.map((item, index) => (
-            <a href="#" key={index}>
-              <img className="books" src={item.image} alt={item.name || "Best Sellers in Home & Kitchen"} />
+          {visibleItems.map((item) => (
+            <a href="#" key={item.id}>
+              <img className="books" src={item.image} alt={item.title} />
             </a>
           ))}
+          {isLandscapeHovering && (
+            <>
+              <button 
+                className="landscape-nav landscape-nav-left" 
+                onClick={() => changeLandscapeItems('prev')}
+              >
+                &#10094; {/* Left arrow */}
+              </button>
+              <button 
+                className="landscape-nav landscape-nav-right" 
+                onClick={() => changeLandscapeItems('next')}
+              >
+                &#10095; {/* Right arrow */}
+              </button>
+            </>
+          )}
         </div>
       </section>
 
@@ -185,18 +220,8 @@ function Catalogue() {
         <div className="productSectionB">
           <ProductGrid title="Gaming accessories" items={gamingAccessories} />
           <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
-          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
           <ProductGrid title="Deals in PCs" items={dealsInPCs} />
           <ProductGrid title="Toys under $25" items={toysUnder25} />
-          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
-          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
-          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
-          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
-
-          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
-          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
-          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
-          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
         </div>
       </section>
 
