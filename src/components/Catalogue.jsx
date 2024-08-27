@@ -257,18 +257,34 @@ const bestSellersInHomeKitchen = [
 ];
 
 const bestSellersInSportsAndOutdoors = [
-  { id: 1, title: "Owala FreeSip Insulated Bottle", price: 29.99,image:"https://m.media-amazon.com/images/I/61KePAu1JAL._AC_SY200_.jpg" },
-  { id: 2, title: "Stanley Quencher 2.0 FlowState Stainless Steel", price: 24.99, image: "https://m.media-amazon.com/images/I/51-U5dEbEBL._AC_SY200_.jpg" },
-  { id: 3, title: "Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Sheets - Hotel Luxury Bed Sheets for Women &amp; Men - Deep...", price: 24.99, image: "https://m.media-amazon.com/images/I/71g+fxKPtyL._AC_SY200_.jpg" },
-  { id: 4, title: "Amazon Basics Lightweight Super Soft Easy Care Microfiber 4-Piece Bed Sheet Set with 14-Inch Deep Pockets, Queen, Black,...", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 5, title: "Bedsure Satin Pillowcase for Hair and Skin Queen - Silver Grey Silky Pillowcase 20x30 Inches - Set of 2 with Envelope...", price: 24.99, image: "https://m.media-amazon.com/images/I/71M6a8SHCeL._AC_SY200_.jpg" },
-  { id: 6, title: "Zevo Flying Insect Trap, Fly Trap + Refill Cartridge Pack (1 Plug-in Base + 3 Total Refill Cartridges)", price: 24.99, image: "https://m.media-amazon.com/images/I/71Cj97guaUL._AC_SY200_.jpg" },
-
-  { id: 7, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 8, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 9, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 10, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  { id: 1, title: "nill", image: "https://m.media-amazon.com/images/I/81Y26toqdTL._AC_SY400_.jpg", alt: "81Y26toqdTL" },
+  { id: 2, title: "nill", image: "https://m.media-amazon.com/images/I/51SxIyLWwUL._AC_SY400_.jpg", alt: "51SxIyLWwUL" },
+  { id: 3, title: "nill", image: "https://m.media-amazon.com/images/I/71S4-NjoTDL._AC_SY400_.jpg", alt: "71S4-NjoTDL" },
+  { id: 4, title: "nill", image: "https://m.media-amazon.com/images/I/81WMJpUv98L._AC_SY400_.jpg", alt: "81WMJpUv98L" },
+  { id: 5, title: "nill", image: "https://m.media-amazon.com/images/I/71-P2+J2RQL._AC_SY400_.jpg", alt: "71-P2+J2RQL" },
+  { id: 6, title: "nill", image: "https://m.media-amazon.com/images/I/91yuQpw++mL._AC_SY400_.jpg", alt: "91yuQpw++mL" },
+  { id: 7, title: "nill", image: "https://m.media-amazon.com/images/I/714EyuLm+HL._AC_SY400_.jpg", alt: "714EyuLm+HL" },
+  { id: 8, title: "nill", image: "https://m.media-amazon.com/images/I/61Denlo-ceL._AC_SY400_.jpg", alt: "61Denlo-ceL" },
+  { id: 9, title: "nill", image: "https://m.media-amazon.com/images/I/71cSLFE39zL._AC_SY400_.jpg", alt: "71cSLFE39zL" },
+  { id: 10, title: "nill", image: "https://m.media-amazon.com/images/I/619fJAHoEzL._AC_SY400_.jpg", alt: "619fJAHoEzL" },
+  { id: 11, title: "nill", image: "https://m.media-amazon.com/images/I/61+UlXddzxL._AC_SY400_.jpg", alt: "61+UlXddzxL" },
+  { id: 12, title: "nill", image: "https://m.media-amazon.com/images/I/71SDZVqu3+L._AC_SY400_.jpg", alt: "71SDZVqu3+L" },
+  { id: 13, title: "nill", image: "https://m.media-amazon.com/images/I/71m-r6CHobL._AC_SY400_.jpg", alt: "71m-r6CHobL" },
+  { id: 14, title: "nill", image: "https://m.media-amazon.com/images/I/71WGsXRgQrL._AC_SY400_.jpg", alt: "71WGsXRgQrL" },
+  { id: 15, title: "nill", image: "https://m.media-amazon.com/images/I/817U5N6rypL._AC_SY400_.jpg", alt: "817U5N6rypL" },
+  { id: 16, title: "nill", image: "https://m.media-amazon.com/images/I/71wm42EtoNL._AC_SY400_.jpg", alt: "71wm42EtoNL" },
+  { id: 17, title: "nill", image: "https://m.media-amazon.com/images/I/51OHYIf9w6L._AC_SY400_.jpg", alt: "51OHYIf9w6L" },
+  { id: 18, title: "nill", image: "https://m.media-amazon.com/images/I/91c3Ca9UdiS._AC_SY400_.jpg", alt: "91c3Ca9UdiS" },
+  { id: 19, title: "nill", image: "https://m.media-amazon.com/images/I/71hYbAifNoL._AC_SY400_.jpg", alt: "71hYbAifNoL" },
+  { id: 20, title: "nill", image: "https://m.media-amazon.com/images/I/41cLCgyBbaL._AC_SY400_.jpg", alt: "41cLCgyBbaL" },
+  { id: 21, title: "nill", image: "https://m.media-amazon.com/images/I/713ybkIUp9L._AC_SY400_.jpg", alt: "713ybkIUp9L" },
+  { id: 22, title: "nill", image: "https://m.media-amazon.com/images/I/61ZLEHX1FsL._AC_SY400_.jpg", alt: "61ZLEHX1FsL" },
+  { id: 23, title: "nill", image: "https://m.media-amazon.com/images/I/71aaK-w9tbL._AC_SY400_.jpg", alt: "71aaK-w9tbL" },
+  { id: 24, title: "nill", image: "https://m.media-amazon.com/images/I/7106YA5SnZL._AC_SY400_.jpg", alt: "7106YA5SnZL" },
+  { id: 25, title: "nill", image: "https://m.media-amazon.com/images/I/41c+ROMdgcL._AC_SY400_.jpg", alt: "41c+ROMdgcL" },
+  { id: 26, title: "nill", image: "https://m.media-amazon.com/images/I/71bN90fJPTL._AC_SY400_.jpg", alt: "71bN90fJPTL" }
 ];
+;
 
 const bestSellersInBeautyPersonalCare = [
   { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
