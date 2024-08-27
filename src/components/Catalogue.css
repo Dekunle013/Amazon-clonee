@@ -8,9 +8,10 @@ main {
 
 .wallpaper {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .wallpaper-nav {
@@ -46,16 +47,16 @@ main {
 .backgroundWallpaper {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   object-fit: cover;
   transition: opacity 1s ease-in-out;
 }
 
 .firstGrid {
   width: 100%;
-  /* height: auto; */
+  height: auto;
   display: flex;
-  /* flex-direction: column; */
-  align-items: center; 
+  align-items: flex-start; 
   justify-content: center;
   /* background-color: rgb(95, 216, 79); */
   padding: 20px;
@@ -64,6 +65,7 @@ main {
   left: 0;
   right: 0;
   z-index: 2;
+  overflow: visible;
 }
 
 .secondGrid {
@@ -82,10 +84,10 @@ main {
 }
 
 .landscape {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 97%;
   height: auto;
-  /* background-color: #7a1212; */
+  background-color: #ffffff;
   margin-bottom: 22px;
   display: flex;
   flex-direction: column;
@@ -94,7 +96,9 @@ main {
 }
 
 .landscape-first {
-  margin-top: 100px; /* Adjust based on the firstGrid height */
+  margin-top: calc(100vh - 40px); /* This pushes the landscape section below the wallpaper */
+  position: relative;
+  z-index: 3;
 }
 
 /* .productsGrid {
@@ -109,79 +113,6 @@ main {
   padding: 20px;
   background-color: #fff;
 } */
-
-.deskTop {
-  width: 270px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.gadgetSmartphone {
-  /* border: 1px solid green; */
-  width: 270px;
-  height: 170px;
-}
-
-.smart1 {
-  width: 270px;
-  height: 170px;
-  object-fit: cover;
-}
-
-.gadgetSmartphoneName {
-  /* border: 1px solid goldenrod; */
-  width: 270px;
-  height: 30px;
-}
-
-.gadgetSmartGrid {
-  margin-top: 20px;
-  /* border: 1px solid green; */
-  width: 270px;
-  height: 75px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 5px;
-}
-
-.gadgetSmartitems {
-  /* border: 1px solid blue; */
-  width: 86px;
-  height: 75px;
-  overflow: hidden;
-}
-
-.gadgetTrio {
-  width: 90px;
-  height: 75px;
-  object-fit: cover;
-}
-
-.gadgetSmartitemsName {
-  /* border: 1px solid gold; */
-  width: 270px;
-  height: 30px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 5px;
-}
-
-.gadgetSmartitemsName div {
-  /* border: 1px solid coral; */
-  width: 86px;
-  height: 30px;
-}
-
-
-.quad {
-  width: 130px;
-  height: 115px;
-  object-fit: cover;
-  border: 1px solid red;
-}
-
-
-
 
 /* ladscape after first grid */
 
@@ -202,7 +133,7 @@ main {
 }
 
 .landA {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: auto;
   width: 100%;
   display: flex;

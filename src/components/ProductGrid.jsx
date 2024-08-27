@@ -35,7 +35,7 @@ function ProductGrid({ title, items }) {
 
       <div className="amazonGadgetLast">
         <a className="seeAnchor" href="#">
-        {getSeeMoreText()}
+          {getSeeMoreText()}
         </a>
       </div>
     </div>
