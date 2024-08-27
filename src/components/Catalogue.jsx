@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Catalogue.css';
 import ProductGrid from './ProductGrid';
 import HandpickSection from './HandpickSection';
@@ -6,6 +6,8 @@ import './LandscapeSection.css'
 
 function Catalogue() {
   const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false); // Add the isHovering state
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -29,15 +31,34 @@ function Catalogue() {
 
   return (
     <main>
-      <div className="wallpaper">
+      <div 
+        className="wallpaper"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
         <img
           className="backgroundWallpaper"
           src={wallpapers[currentWallpaperIndex]}
           alt={`Amazon Background Wallpaper ${currentWallpaperIndex + 1}`}
         />
-      </div>
+        {isHovering && (
+          <>
+            <button 
+              className="wallpaper-nav wallpaper-nav-left" 
+              onClick={() => changeWallpaper('prev')}
+            >
+              &#10094; {/* Left arrow */}
+            </button>
+            <button 
+              className="wallpaper-nav wallpaper-nav-right" 
+              onClick={() => changeWallpaper('next')}
+            >
+              &#10095; {/* Right arrow */}
+            </button>
+          </>
+        )}
 
-      <section className='firstGrid'>
+<section className='firstGrid'>
         <div className="productSectionA">
           <ProductGrid title="Gaming accessories" items={gamingAccessories} />
           <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
@@ -50,8 +71,11 @@ function Catalogue() {
           <ProductGrid title="Home decor under $50" items={decorUnder50} />
         </div>
       </section>
+      </div>
 
-      <section className="landscape">
+      
+
+      <section className="landscape landscape-first">
         <div className="headlineA">
           <span>Best Sellers in Home & Kitchen</span>
         </div>
@@ -204,7 +228,6 @@ const wallpapers = [
   "https://m.media-amazon.com/images/I/610ZRyRg+jL._SX3000_.jpg",
   "https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg",
   "https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg",
-  // Add more image URLs as needed
 ];
 
 const gamingAccessories = [
