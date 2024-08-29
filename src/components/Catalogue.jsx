@@ -6,12 +6,6 @@ import './LandscapeSection.css';
 function Catalogue() {
   const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
-  const [isLandscapeHovering, setIsLandscapeHovering] = useState(false);
-  const [landscapeIndex, setLandscapeIndex] = useState(0); // State to track the current index in the landscape section
-
-  // const wallpapers = []; // Add your wallpaper array here
-  const itemsPerPage = 5; // Number of items to display at a time
-  const visibleItems = bestSellersInHomeKitchen.slice(landscapeIndex, landscapeIndex + itemsPerPage);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -20,7 +14,7 @@ function Catalogue() {
       );
     }, 15000); 
 
-    return () => clearInterval(intervalId); // Cleanup on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   const changeWallpaper = (direction) => {
@@ -33,18 +27,54 @@ function Catalogue() {
     });
   };
 
-  const changeLandscapeItems = (direction) => {
-    if (direction === 'next') {
-      setLandscapeIndex((prevIndex) => {
-        const newIndex = prevIndex + itemsPerPage;
-        return newIndex >= bestSellersInHomeKitchen.length ? 0 : newIndex;
+  const LandscapeSection = ({ title, items }) => {
+    const [isLandscapeHovering, setIsLandscapeHovering] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const changeLandscapeItems = (direction) => {
+      setCurrentIndex((prevIndex) => {
+        if (direction === 'next') {
+          return (prevIndex + 1) % items.length;
+        } else {
+          return prevIndex === 0 ? items.length - 1 : prevIndex - 1;
+        }
       });
-    } else {
-      setLandscapeIndex((prevIndex) => {
-        const newIndex = prevIndex - itemsPerPage;
-        return newIndex < 0 ? bestSellersInHomeKitchen.length - itemsPerPage : newIndex;
-      });
-    }
+    };
+
+    return (
+      <section 
+        className="landscape"
+        onMouseEnter={() => setIsLandscapeHovering(true)}
+        onMouseLeave={() => setIsLandscapeHovering(false)}
+      >
+        <div className="headlineA">
+          <span>{title}</span>
+        </div>
+        <div className="landA">
+          {items.slice(currentIndex, currentIndex + 5).map((item) => (
+            <a href="#" key={item.id}>
+              <img className="books" src={item.image} alt={item.title || item.name || "Product"} />
+            </a>
+          ))}
+          {isLandscapeHovering && (
+            <>
+              <button 
+                className="landscape-nav landscape-nav-left" 
+                onClick={() => changeLandscapeItems('prev')}
+              >
+                &#10094;
+              </button>
+              <button 
+                className="landscape-nav landscape-nav-right" 
+                onClick={() => changeLandscapeItems('next')}
+              >
+                &#10095;
+              </button>
+            </>
+          )}
+        </div>
+      </section>
+    );
   };
 
   return (
@@ -65,13 +95,13 @@ function Catalogue() {
               className="wallpaper-nav wallpaper-nav-left" 
               onClick={() => changeWallpaper('prev')}
             >
-              &#10094; {/* Left arrow */}
+              &#10094;
             </button>
             <button 
               className="wallpaper-nav wallpaper-nav-right" 
               onClick={() => changeWallpaper('next')}
             >
-              &#10095; {/* Right arrow */}
+              &#10095;
             </button>
           </>
         )}
@@ -90,51 +120,8 @@ function Catalogue() {
         </section>
       </div>
 
-      <section 
-        className="landscape landscape-first"
-        onMouseEnter={() => setIsLandscapeHovering(true)}
-        onMouseLeave={() => setIsLandscapeHovering(false)}
-      >
-        <div className="headlineA">
-          <span>Best Sellers in Home & Kitchen</span>
-        </div>
-        <div className="landA">
-          {visibleItems.map((item) => (
-            <a href="#" key={item.id}>
-              <img className="books" src={item.image} alt={item.title} />
-            </a>
-          ))}
-          {isLandscapeHovering && (
-            <>
-              <button 
-                className="landscape-nav landscape-nav-left" 
-                onClick={() => changeLandscapeItems('prev')}
-              >
-                &#10094; {/* Left arrow */}
-              </button>
-              <button 
-                className="landscape-nav landscape-nav-right" 
-                onClick={() => changeLandscapeItems('next')}
-              >
-                &#10095; {/* Right arrow */}
-              </button>
-            </>
-          )}
-        </div>
-      </section>
-
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Sports & Outdoors</span>
-        </div>
-        <div className="landA">
-          {bestSellersInSportsAndOutdoors.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Sports & Outdoor Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
+      <LandscapeSection title="Best Sellers in Home & Kitchen" items={bestSellersInHomeKitchen} />
+      <LandscapeSection title="Best Sellers in Sports & Outdoors" items={bestSellersInSportsAndOutdoors} />
 
       <section className='secondGrid'>
         <div className="productSectionB">
@@ -145,76 +132,7 @@ function Catalogue() {
         </div>
       </section>
       
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Beauty & Personal Care</span>
-        </div>
-        <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Beauty & Personal Care</span>
-        </div>
-        <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className='secondGrid'>
-        <div className="productSectionB">
-          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
-          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
-          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
-          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
-          <ProductGrid title="Toys under $25" items={toysUnder25} />
-          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
-          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
-          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
-          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
-
-          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
-          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
-          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
-          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
-        </div>
-      </section>
-      
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Beauty & Personal Care</span>
-        </div>
-        <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Beauty & Personal Care</span>
-        </div>
-        <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
+      <LandscapeSection title="Best Sellers in Beauty & Personal Care" items={bestSellersInBeautyPersonalCare} />
 
       <section className='secondGrid'>
         <div className="productSectionB">
@@ -223,23 +141,6 @@ function Catalogue() {
           <ProductGrid title="Deals in PCs" items={dealsInPCs} />
           <ProductGrid title="Toys under $25" items={toysUnder25} />
         </div>
-      </section>
-
-      <section className="landscape">
-        <div className="headlineA">
-          <span>Best Sellers in Beauty & Personal Care</span>
-        </div>
-        <div className="landA">
-          {bestSellersInBeautyPersonalCare.map((item, index) => (
-            <a href="#" key={index}>
-              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
-            </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="landscape">
-       
       </section>
     </main>
   );
@@ -324,17 +225,136 @@ const shoesPrice = [
 
 
 const bestSellersInHomeKitchen = [
-  { id: 1, title: "Owala FreeSip Insulated Bottle", price: 29.99,image:"https://m.media-amazon.com/images/I/61KePAu1JAL._AC_SY200_.jpg" },
-  { id: 2, title: "Stanley Quencher 2.0 FlowState Stainless Steel", price: 24.99, image: "https://m.media-amazon.com/images/I/51-U5dEbEBL._AC_SY200_.jpg" },
-  { id: 3, title: "Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Sheets - Hotel Luxury Bed Sheets for Women &amp; Men - Deep...", price: 24.99, image: "https://m.media-amazon.com/images/I/71g+fxKPtyL._AC_SY200_.jpg" },
-  { id: 4, title: "Amazon Basics Lightweight Super Soft Easy Care Microfiber 4-Piece Bed Sheet Set with 14-Inch Deep Pockets, Queen, Black,...", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 5, title: "Bedsure Satin Pillowcase for Hair and Skin Queen - Silver Grey Silky Pillowcase 20x30 Inches - Set of 2 with Envelope...", price: 24.99, image: "https://m.media-amazon.com/images/I/71M6a8SHCeL._AC_SY200_.jpg" },
-  { id: 6, title: "Zevo Flying Insect Trap, Fly Trap + Refill Cartridge Pack (1 Plug-in Base + 3 Total Refill Cartridges)", price: 24.99, image: "https://m.media-amazon.com/images/I/71Cj97guaUL._AC_SY200_.jpg" },
-
-  { id: 7, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 8, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 9, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
-  { id: 10, title: "Amazon Basics Lightweight Super Soft Easy", price: 24.99, image: "https://m.media-amazon.com/images/I/71t45pSxVkL._AC_SY200_.jpg" },
+  {
+    id: 1,
+    title: "Product 1",
+    image: "https://m.media-amazon.com/images/I/61X5bY+reYL._AC_SY400_.jpg",
+  },
+  {
+    id: 2,
+    title: "Product 2",
+    image: "https://m.media-amazon.com/images/I/51C2DONw-TL._AC_SY400_.jpg",
+  },
+  {
+    id: 3,
+    title: "Product 3",
+    image: "https://m.media-amazon.com/images/I/717FfWa5e4L._AC_SY400_.jpg",
+  },
+  {
+    id: 4,
+    title: "Product 4",
+    image: "https://m.media-amazon.com/images/I/61KCbJGpAFL._AC_SY400_.jpg",
+  },
+  {
+    id: 5,
+    title: "Product 5",
+    image: "https://m.media-amazon.com/images/I/713afJ6oJ+L._AC_SY400_.jpg",
+  },
+  {
+    id: 6,
+    title: "Product 6",
+    image: "https://m.media-amazon.com/images/I/71M6a8SHCeL._AC_SY400_.jpg",
+  },
+  {
+    id: 7,
+    title: "Product 7",
+    image: "https://m.media-amazon.com/images/I/51lFr88wxML._AC_SY400_.jpg",
+  },
+  {
+    id: 8,
+    title: "Product 8",
+    image: "https://m.media-amazon.com/images/I/51xy9oTOHlL._AC_SY400_.jpg",
+  },
+  {
+    id: 9,
+    title: "Product 9",
+    image: "https://m.media-amazon.com/images/I/71wv3D6w-vL._AC_SY400_.jpg",
+  },
+  {
+    id: 10,
+    title: "Product 10",
+    image: "https://m.media-amazon.com/images/I/71RekxT+qML._AC_SY400_.jpg",
+  },
+  {
+    id: 11,
+    title: "Product 11",
+    image: "https://m.media-amazon.com/images/I/61UFMf2FffL._AC_SY400_.jpg",
+  },
+  {
+    id: 12,
+    title: "Product 12",
+    image: "https://m.media-amazon.com/images/I/81RLgrUwG5L._AC_SY400_.jpg",
+  },
+  {
+    id: 13,
+    title: "Product 13",
+    image: "https://m.media-amazon.com/images/I/81jUEgf7F3L._AC_SY400_.jpg",
+  },
+  {
+    id: 14,
+    title: "Product 14",
+    image: "https://m.media-amazon.com/images/I/81yeSy2PbtL._AC_SY400_.jpg",
+  },
+  {
+    id: 15,
+    title: "Product 15",
+    image: "https://m.media-amazon.com/images/I/81JmVgvOmCL._AC_SY400_.jpg",
+  },
+  {
+    id: 16,
+    title: "Product 16",
+    image: "https://m.media-amazon.com/images/I/71Pw5U7rFlL._AC_SY400_.jpg",
+  },
+  {
+    id: 17,
+    title: "Product 17",
+    image: "https://m.media-amazon.com/images/I/71nhPE7vxHL._AC_SY400_.jpg",
+  },
+  {
+    id: 18,
+    title: "Product 18",
+    image: "https://m.media-amazon.com/images/I/71t-9BTIg9L._AC_SY400_.jpg",
+  },
+  {
+    id: 19,
+    title: "Product 19",
+    image: "https://m.media-amazon.com/images/I/51c5xruL9zL._AC_SY400_.jpg",
+  },
+  {
+    id: 20,
+    title: "Product 20",
+    image: "https://m.media-amazon.com/images/I/91GmE6gQF9L._AC_SY400_.jpg",
+  },
+  {
+    id: 21,
+    title: "Product 21",
+    image: "https://m.media-amazon.com/images/I/710mHCabqIL._AC_SY400_.jpg",
+  },
+  {
+    id: 22,
+    title: "Product 22",
+    image: "https://m.media-amazon.com/images/I/81SIy4WF3bL._AC_SY400_.jpg",
+  },
+  {
+    id: 23,
+    title: "Product 23",
+    image: "https://m.media-amazon.com/images/I/81AFxaQnZXL._AC_SY400_.jpg",
+  },
+  {
+    id: 24,
+    title: "Product 24",
+    image: "https://m.media-amazon.com/images/I/812Bae40uHL._AC_SY400_.jpg",
+  },
+  {
+    id: 25,
+    title: "Product 25",
+    image: "https://m.media-amazon.com/images/I/61mdPtC0iIL._AC_SY400_.jpg",
+  },
+  {
+    id: 26,
+    title: "Product 26",
+    image: "https://m.media-amazon.com/images/I/71O0Is7QpeL._AC_SY400_.jpg",
+  },
 ];
 
 const bestSellersInSportsAndOutdoors = [
@@ -371,15 +391,6 @@ const bestSellersInBeautyPersonalCare = [
   { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
   
 ];
-
-// const activityTrackers = [
-//   { id: 1, title: "Fitness Tracker", price: 99.99, image: "fitness_tracker.jpg" },
-// ];
-
-// const gamingMerchandise = [
-//   { id: 1, title: "T-Shirt", price: 19.99, image: "tshirt.jpg" },
-//   { id: 2, title: "Cap", price: 14.99, image: "cap.jpg" },
-// ];
 
 
 export default Catalogue;

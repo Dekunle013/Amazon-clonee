@@ -71,7 +71,7 @@ main {
 .secondGrid {
   width: 100%;
   padding: 20px;
-  background-color: rgb(93, 79, 216);
+  /* background-color: rgb(93, 79, 216); */
 }
 
 .productSectionB {
@@ -126,9 +126,7 @@ main {
   height: auto;
   width: 100%;
   display: flex;
-  /* overflow-x: auto; */
   overflow-y: hidden;
-  /* overflow-x: scroll; */
   margin: 0px 0px 14px;
 }
 
@@ -143,7 +141,7 @@ main {
 
 .books {
   /* width: calc(100% / 6); Adjust based on how many items you want to show */
-  height: auto;
+  height: 200px;
   object-fit: cover;
 }
 
