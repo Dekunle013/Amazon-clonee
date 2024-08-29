@@ -70,7 +70,7 @@ function Catalogue() {
         </section>
       </div>
 
-      <LandscapeContainer category="homeKitchen" />
+      <LandscapeContainer category="homeKitchen" isFirst />
       <LandscapeContainer category="sportsOutdoors" />
 
       <section className='secondGrid'>

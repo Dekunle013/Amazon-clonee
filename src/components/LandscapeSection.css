@@ -12,14 +12,10 @@
 }
 
 .landscape-first {
-  margin-top: calc(100vh - 40px); /* This pushes the landscape section below the wallpaper */
+  margin-top: calc(100vh - 40px);
   position: relative;
   z-index: 3;
 }
-
-/* ladscape after first grid */
-
-
 
 .headlineA {
   /* border: 1px solid blue; */
