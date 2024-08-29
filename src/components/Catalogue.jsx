@@ -6,6 +6,8 @@ import './LandscapeSection.css';
 function Catalogue() {
   const [currentWallpaperIndex, setCurrentWallpaperIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [isLandscapeHovering, setIsLandscapeHovering] = useState(false);
+  const [isSportsHovering, setIsSportsHovering] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -14,7 +16,7 @@ function Catalogue() {
       );
     }, 15000); 
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId); // Cleanup on component unmount
   }, []);
 
   const changeWallpaper = (direction) => {
@@ -25,56 +27,6 @@ function Catalogue() {
         return prevIndex === 0 ? wallpapers.length - 1 : prevIndex - 1;
       }
     });
-  };
-
-  const LandscapeSection = ({ title, items }) => {
-    const [isLandscapeHovering, setIsLandscapeHovering] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const changeLandscapeItems = (direction) => {
-      setCurrentIndex((prevIndex) => {
-        if (direction === 'next') {
-          return (prevIndex + 1) % items.length;
-        } else {
-          return prevIndex === 0 ? items.length - 1 : prevIndex - 1;
-        }
-      });
-    };
-
-    return (
-      <section 
-        className="landscape"
-        onMouseEnter={() => setIsLandscapeHovering(true)}
-        onMouseLeave={() => setIsLandscapeHovering(false)}
-      >
-        <div className="headlineA">
-          <span>{title}</span>
-        </div>
-        <div className="landA">
-          {items.slice(currentIndex, currentIndex + 5).map((item) => (
-            <a href="#" key={item.id}>
-              <img className="books" src={item.image} alt={item.title || item.name || "Product"} />
-            </a>
-          ))}
-          {isLandscapeHovering && (
-            <>
-              <button 
-                className="landscape-nav landscape-nav-left" 
-                onClick={() => changeLandscapeItems('prev')}
-              >
-                &#10094;
-              </button>
-              <button 
-                className="landscape-nav landscape-nav-right" 
-                onClick={() => changeLandscapeItems('next')}
-              >
-                &#10095;
-              </button>
-            </>
-          )}
-        </div>
-      </section>
-    );
   };
 
   return (
@@ -95,13 +47,13 @@ function Catalogue() {
               className="wallpaper-nav wallpaper-nav-left" 
               onClick={() => changeWallpaper('prev')}
             >
-              &#10094;
+              &#10094; {/* Left arrow */}
             </button>
             <button 
               className="wallpaper-nav wallpaper-nav-right" 
               onClick={() => changeWallpaper('next')}
             >
-              &#10095;
+              &#10095; {/* Right arrow */}
             </button>
           </>
         )}
@@ -120,8 +72,39 @@ function Catalogue() {
         </section>
       </div>
 
-      <LandscapeSection title="Best Sellers in Home & Kitchen" items={bestSellersInHomeKitchen} />
-      <LandscapeSection title="Best Sellers in Sports & Outdoors" items={bestSellersInSportsAndOutdoors} />
+      <section 
+        className="landscape landscape-first"
+        onMouseEnter={() => setIsLandscapeHovering(true)}
+        onMouseLeave={() => setIsLandscapeHovering(false)}
+      >
+        <div className="headlineA">
+          <span>Best Sellers in Home & Kitchen</span>
+        </div>
+        <div className="landA">
+          {bestSellersInHomeKitchen.map((item) => (
+            <a href="#" key={item.id}>
+              <img className="books" src={item.image} alt={item.title} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section 
+        className="landscape landscape-sports"
+        onMouseEnter={() => setIsSportsHovering(true)}
+        onMouseLeave={() => setIsSportsHovering(false)}
+      >
+        <div className="headlineA">
+          <span>Best Sellers in Sports & Outdoors</span>
+        </div>
+        <div className="landA">
+          {bestSellersInSportsAndOutdoors.map((item) => (
+            <a href="#" key={item.id}>
+              <img className="books" src={item.image} alt={item.name || "Sports & Outdoor Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className='secondGrid'>
         <div className="productSectionB">
@@ -132,7 +115,58 @@ function Catalogue() {
         </div>
       </section>
       
-      <LandscapeSection title="Best Sellers in Beauty & Personal Care" items={bestSellersInBeautyPersonalCare} />
+      <section className="landscape">
+        <div className="headlineA">
+          <span>Best Sellers in Beauty & Personal Care</span>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="landscape">
+        <div className="headlineA">
+          <span>Best Sellers in Beauty & Personal Care</span>
+        </div>
+        <div className="landA">
+          {bestSellersInBeautyPersonalCare.map((item, index) => (
+            <a href="#" key={index}>
+              <img src={item.image} alt={item.name || "Beauty & Personal Care Item"} />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className='secondGrid'>
+        <div className="productSectionB">
+          <ProductGrid title="Gaming accessories" items={gamingAccessories} />
+          <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
+          {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
+          <ProductGrid title="Deals in PCs" items={dealsInPCs} />
+          <ProductGrid title="Toys under $25" items={toysUnder25} />
+          {/* <ProductGrid title="Fashion Trends You Like" items={fashionTrend} /> */}
+          {/* <ProductGrid title="Beauty Steals under $25" items={BeautyUnder25} /> */}
+          {/* <ProductGrid title="Home decor under $50" items={decorUnder50} /> */}
+          {/* <ProductGrid title="Toys under $25" items={toysUnder25} /> */}
+
+          {/* <ProductGrid title="Amazon Gadget Store" items={amazonGadgetStore} /> */}
+          {/* <HandpickSection title="Handpicked music & audio" items={handpickedMusicAudio} /> */}
+          {/* <ProductGrid title="Fill your Easter basket with joy" items={easterBasket} /> */}
+          {/* <ProductGrid title="Top Deal" items={topDeal} /> */}
+        </div>
+      </section>
+      
+      <section className="landscape">
+      
+      </section>
+
+      <section className="landscape">
+        
+      </section>
 
       <section className='secondGrid'>
         <div className="productSectionB">
@@ -141,6 +175,14 @@ function Catalogue() {
           <ProductGrid title="Deals in PCs" items={dealsInPCs} />
           <ProductGrid title="Toys under $25" items={toysUnder25} />
         </div>
+      </section>
+
+      <section className="landscape">
+        
+      </section>
+
+      <section className="landscape">
+       
       </section>
     </main>
   );
@@ -391,6 +433,7 @@ const bestSellersInBeautyPersonalCare = [
   { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
   
 ];
+
 
 
 export default Catalogue;
