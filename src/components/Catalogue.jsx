@@ -116,13 +116,8 @@ function Catalogue() {
         </div>
       </section>
 
-      <section className="landscape">
-        
-      </section>
-
-      <section className="landscape">
-       
-      </section>
+      <LandscapeContainer category="moviesTVsWish" />
+      
     </main>
   );
 }
@@ -201,12 +196,6 @@ const welcomeDecor = [
 
 const shoesPrice = [
   { id: 2, title: "Great shoe price", price: 749.99, image: "https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2023/EBF23/Fuji_Desktop_Single_image_EBF_1x_v8._SY304_CB573698005_.jpg" },
-];
-
-
-const bestSellersInBeautyPersonalCare = [
-  { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
-  
 ];
 
 

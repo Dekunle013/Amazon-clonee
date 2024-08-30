@@ -1,5 +1,5 @@
 .landscape {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
   width: 97%;
   height: auto;
@@ -37,6 +37,7 @@
   height: auto;
   width: 100%;
   display: flex;
+  align-items: center;
   overflow-y: hidden;
   margin: 0px 0px 14px;
 }
@@ -52,8 +53,11 @@
 
 .books {
   /* width: calc(100% / 6); Adjust based on how many items you want to show */
-  height: 200px;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 270px;
+  max-height: 200px;
+  vertical-align: middle;
 }
 
 .landscape-nav {
