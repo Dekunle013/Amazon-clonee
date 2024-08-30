@@ -142,6 +142,246 @@ const LandscapeContainer = ({ category, isFirst }) => {
           image: "https://m.media-amazon.com/images/I/61zhzjgd2xL._AC_SY400_.jpg"}
       ],
     },
+
+    topPicksForNigeria: {
+      title: "Top Picks for Nigeria",
+      items: [
+        {
+          id: 100,
+          title: "Top Pick 1",
+          image: "https://m.media-amazon.com/images/I/71lRPcRgJjL._AC_SY400_.jpg",
+        },
+        {
+          id: 101,
+          title: "Top Pick 2",
+          image: "https://m.media-amazon.com/images/I/51glBADjrpL._AC_SY400_.jpg",
+        },
+        {
+          id: 102,
+          title: "Top Pick 3",
+          image: "https://m.media-amazon.com/images/I/51glBADjrpL._AC_SY400_.jpg",
+        },
+        {
+          id: 103,
+          title: "Top Pick 4",
+          image: "https://m.media-amazon.com/images/I/517aJbAwDEL._AC_SY400_.jpg",
+        },
+        {
+          id: 104,
+          title: "Top Pick 5",
+          image: "https://m.media-amazon.com/images/I/412XE0J9GIL._AC_SY400_.jpg",
+        },
+        {
+          id: 105,
+          title: "Top Pick 6",
+          image: "https://m.media-amazon.com/images/I/61IylKAap-L._AC_SY400_.jpg",
+        },
+        {
+          id: 106,
+          title: "Top Pick 7",
+          image: "https://m.media-amazon.com/images/I/61pp+20Oo0L._AC_SY400_.jpg",
+        },
+        {
+          id: 107,
+          title: "Top Pick 8",
+          image: "https://m.media-amazon.com/images/I/61baox2Ih-L._AC_SY400_.jpg",
+        },
+        {
+          id: 108,
+          title: "Top Pick 9",
+          image: "https://m.media-amazon.com/images/I/71c93lOix0L._AC_SY400_.jpg",
+        },
+        {
+          id: 109,
+          title: "Top Pick 10",
+          image: "https://m.media-amazon.com/images/I/61cmA0j4n+L._AC_SY400_.jpg",
+        },
+        {
+          id: 110,
+          title: "Top Pick 11",
+          image: "https://m.media-amazon.com/images/I/81WKMB7O9lL._AC_SY400_.jpg",
+        },
+        {
+          id: 111,
+          title: "Top Pick 12",
+          image: "https://m.media-amazon.com/images/I/81HgLJqSsnL._AC_SY400_.jpg",
+        },
+        {
+          id: 112,
+          title: "Top Pick 13",
+          image: "https://m.media-amazon.com/images/I/71FohJtmeNL._AC_SY400_.jpg",
+        },
+        {
+          id: 113,
+          title: "Top Pick 14",
+          image: "https://m.media-amazon.com/images/I/61dCeHt-usL._AC_SY400_.jpg",
+        },
+        {
+          id: 114,
+          title: "Top Pick 15",
+          image: "https://m.media-amazon.com/images/I/61dCeHt-usL._AC_SY400_.jpg"},
+      ]
+    },
+
+    bestSellerInBooks: {
+      title: "Best Seller In Books",
+      items: [
+        {
+          id: 27,
+          title: "Product 27", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/713-J3tw46L._AC_SY200_.jpg",
+        },
+        {
+          id: 28,
+          title: "Product 28", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/810bsxh1MmL._AC_SY200_.jpg",
+        },
+        {
+          id: 29,
+          title: "Product 29", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/71ihGxMQEBL._AC_SY200_.jpg",
+        },
+        {
+          id: 30,
+          title: "Product 30", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/913C+MR3S5L._AC_SY200_.jpg",
+        },
+        {
+          id: 31,
+          title: "Product 31", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/91yskyVPAmL._AC_SY200_.jpg",
+        },
+        {
+          id: 32,
+          title: "Product 32", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/61ARXVDOxJL._AC_SY200_.jpg",
+        },
+        {
+          id: 33,
+          title: "Product 33", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81NsX5gOJkL._AC_SY200_.jpg",
+        },
+        {
+          id: 34,
+          title: "Product 34", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81z1AGbMEVL._AC_SY200_.jpg",
+        },
+        {
+          id: 35,
+          title: "Product 35", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/61kllnlY7YL._AC_SY200_.jpg",
+        },
+        {
+          id: 36,
+          title: "Product 36", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/51xKFo2B+RL._AC_SY200_.jpg",
+        },
+        {
+          id: 37,
+          title: "Product 37", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_SY200_.jpg",
+        },
+        {
+          id: 38,
+          title: "Product 38", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81uv7QtqJ0L._AC_SY200_.jpg",
+        },
+        {
+          id: 39,
+          title: "Product 39", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/41XZlhQ+5NL._AC_SY200_.jpg",
+        },
+        {
+          id: 40,
+          title: "Product 40", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/919XM42JQlL._AC_SY200_.jpg",
+        },
+        {
+          id: 41,
+          title: "Product 41", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/919XM42JQlL._AC_SY200_.jpg"},
+      ]
+    },
+
+    videoGameWish: {
+      title: "Most Wished for In Video Games",
+      items: [
+        {
+          id: 57,
+          title: "Product 57", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/810iANmKbOL._AC_SY200_.jpg",
+        },
+        {
+          id: 58,
+          title: "Product 58", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/61GhF+JUXGL._AC_SY200_.jpg",
+        },
+        {
+          id: 59,
+          title: "Product 59", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81KYcp48kgL._AC_SY200_.jpg",
+        },
+        {
+          id: 60,
+          title: "Product 60", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/810Uk95Z3mL._AC_SY200_.jpg",
+        },
+        {
+          id: 61,
+          title: "Product 61", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81gu2dFpntL._AC_SY200_.jpg",
+        },
+        {
+          id: 62,
+          title: "Product 62", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/71FE4-P8hwL._AC_SY200_.jpg",
+        },
+        {
+          id: 63,
+          title: "Product 63", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81o5QpJ7aVL._AC_SY200_.jpg",
+        },
+        {
+          id: 64,
+          title: "Product 64", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81whTB488bL._AC_SY200_.jpg",
+        },
+        {
+          id: 65,
+          title: "Product 65", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/8139kZStJ6L._AC_SY200_.jpg",
+        },
+        {
+          id: 66,
+          title: "Product 66", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/818PodmmRaL._AC_SY200_.jpg",
+        },
+        {
+          id: 67,
+          title: "Product 67", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/71XZn4NaWIL._AC_SY200_.jpg",
+        },
+        {
+          id: 68,
+          title: "Product 68", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81aJ-R4E6gL._AC_SY200_.jpg",
+        },
+        {
+          id: 69,
+          title: "Product 69", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/81LLoGOJ9RL._AC_SY200_.jpg",
+        },
+        {
+          id: 70,
+          title: "Product 70", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/71Y8X0WHh1L._AC_SY200_.jpg",
+        },
+        {
+          id: 71,
+          title: "Product 71", // Replace with actual title if available
+          image: "https://m.media-amazon.com/images/I/71Y8X0WHh1L._AC_SY200_.jpg"}
+      ]
+    }
   };
 
   const { title, items } = categories[category];
