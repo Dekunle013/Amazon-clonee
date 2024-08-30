@@ -70,8 +70,76 @@ const LandscapeContainer = ({ category, isFirst }) => {
     beautyPersonalCare: {
       title: "Best Sellers in Beauty & Personal Care",
       items: [
-        { id: 1, title: "Facial Cleanser", price: 14.99, image: "cleanser.jpg" },
-        // ... add more items as needed
+        {id: 42, title: "Product 42", image: "https://m.media-amazon.com/images/I/51YlAYwPx6L._AC_SY200_.jpg",},
+        {
+          id: 43,
+          title: "Product 43",
+          image: "https://m.media-amazon.com/images/I/61NFkX7td8L._AC_SY200_.jpg",
+        },
+        {
+          id: 44,
+          title: "Product 44",
+          image: "https://m.media-amazon.com/images/I/51bryY47IFL._AC_SY200_.jpg",
+        },
+        {
+          id: 45,
+          title: "Product 45",
+          image: "https://m.media-amazon.com/images/I/41tFi33Pi6L._AC_SY200_.jpg",
+        },
+        {
+          id: 46,
+          title: "Product 46",
+          image: "https://m.media-amazon.com/images/I/41roS4Ps5RL._AC_SY200_.jpg",
+        },
+        {
+          id: 47,
+          title: "Product 47",
+          image: "https://m.media-amazon.com/images/I/612HeyYXOnL._AC_SY200_.jpg",
+        },
+        {
+          id: 48,
+          title: "Product 48",
+          image: "https://m.media-amazon.com/images/I/71PXjjbQCzL._AC_SY200_.jpg",
+        },
+        {
+          id: 49,
+          title: "Product 49",
+          image: "https://m.media-amazon.com/images/I/71XeBzXVE+L._AC_SY400_.jpg",
+        },
+        {
+          id: 50,
+          title: "Product 50",
+          image: "https://m.media-amazon.com/images/I/61pIL2maVKL._AC_SY400_.jpg",
+        },
+        {
+          id: 51,
+          title: "Product 51",
+          image: "https://m.media-amazon.com/images/I/51iMh82b5UL._AC_SY400_.jpg",
+        },
+        {
+          id: 52,
+          title: "Product 52",
+          image: "https://m.media-amazon.com/images/I/71fizOWwhFL._AC_SY400_.jpg",
+        },
+        {
+          id: 53,
+          title: "Product 53",
+          image: "https://m.media-amazon.com/images/I/41xE4gTTZQL._AC_SY400_.jpg",
+        },
+        {
+          id: 54,
+          title: "Product 54",
+          image: "https://m.media-amazon.com/images/I/71x8eJYN4JL._AC_SY400_.jpg",
+        },
+        {
+          id: 55,
+          title: "Product 55",
+          image: "https://m.media-amazon.com/images/I/61zhzjgd2xL._AC_SY400_.jpg",
+        },
+        {
+          id: 56,
+          title: "Product 56",
+          image: "https://m.media-amazon.com/images/I/61zhzjgd2xL._AC_SY400_.jpg"}
       ],
     },
   };
