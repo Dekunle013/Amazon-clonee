@@ -60,6 +60,12 @@
   vertical-align: middle;
 }
 
+.lastContainer {
+  width: 97%;
+  height: 100px;
+  border: 1px solid purple;
+}
+
 .landscape-nav {
   position: absolute;
   top: 50%;

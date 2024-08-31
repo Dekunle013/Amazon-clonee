@@ -462,6 +462,8 @@ const LandscapeContainer = ({ category, isFirst }) => {
           image: "https://m.media-amazon.com/images/I/71G9scZtapL._AC_SY200_.jpg"},
       ]
     },
+
+    
   };
 
   const { title, items } = categories[category];
