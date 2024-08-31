@@ -117,7 +117,7 @@ function Catalogue() {
       </section>
 
       <LandscapeContainer category="moviesTVsWish" />
-      {/* <LandscapeContainer category="lastContainer" /> */}
+      <LandscapeContainer category="landscape-footer" />
       
     </main>
   );

@@ -60,9 +60,9 @@
   vertical-align: middle;
 }
 
-.lastContainer {
+.landscape-footer {
   width: 97%;
-  height: 100px;
+  height: auto;
   border: 1px solid purple;
 }
 

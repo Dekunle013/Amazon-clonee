@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './LandscapeSection.css';
 
-const LandscapeContainer = ({ category, isFirst }) => {
+const LandscapeContainer = ({ category, isFirst, isLast }) => {
   const categories = {
     homeKitchen: {
       title: "Best Sellers in Home & Kitchen",
@@ -466,10 +466,27 @@ const LandscapeContainer = ({ category, isFirst }) => {
     
   };
 
+if (category === 'landscape-footer') {
+    return (
+      <section className="landscape landscape-footer">
+        <span>recommended</span>
+        <a href="#">Sign In</a>
+        <span>hello</span>
+      </section>
+    );
+  }
+
+  // For regular categories
+  if (!categories[category]) {
+    console.warn(`Invalid category: ${category}`);
+    return null;
+  }
+
   const { title, items } = categories[category];
   
-  // Apply conditional class for the first container
-  const containerClass = isFirst ? "landscape landscape-first" : "landscape";
+  // Apply conditional classes for the first and last containers
+  const containerClass = `landscape${isFirst ? ' landscape-first' : ''}${isLast ? ' landscape-last' : ''}`;
+
 
   return (
     <section className={containerClass}>
@@ -487,13 +504,25 @@ const LandscapeContainer = ({ category, isFirst }) => {
   );
 };
 
+
+
 LandscapeContainer.propTypes = {
-  category: PropTypes.oneOf(['homeKitchen', 'sportsOutdoors', 'beautyPersonalCare']).isRequired,
+  category: PropTypes.oneOf([
+    'homeKitchen',
+    'sportsOutdoors',
+    'beautyPersonalCare',
+    'topPicksForNigeria',
+    'bestSellerInBooks',
+    'videoGameWish',
+    'moviesTVsWish'
+  ]).isRequired,
   isFirst: PropTypes.bool,
+  isLast: PropTypes.bool,
 };
 
 LandscapeContainer.defaultProps = {
   isFirst: false,
+  isLast: false,
 };
 
 export default LandscapeContainer;
