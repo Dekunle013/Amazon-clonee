@@ -469,9 +469,11 @@ const LandscapeContainer = ({ category, isFirst, isLast }) => {
 if (category === 'landscape-footer') {
     return (
       <section className="landscape landscape-footer">
-        <span>recommended</span>
-        <a href="#">Sign In</a>
-        <span>hello</span>
+        <div>
+        <span>See personalized recommendations</span>
+        <a href="#">Sign in</a>
+        <span>New customer? <a href="#">Start here.</a></span>
+        </div>
       </section>
     );
   }
