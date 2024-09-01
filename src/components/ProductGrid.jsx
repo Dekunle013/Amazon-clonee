@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductGrid.css';
 
 function ProductGrid({ title, items }) {
+  const navigate = useNavigate();
   const isSingleItem = items.length === 1;
 
   const getSeeMoreText = () => {
@@ -16,6 +18,10 @@ function ProductGrid({ title, items }) {
     }
   };
 
+  const handleProductClick = (item) => {
+    navigate(`/product/${item.id}`);
+  };
+
   return (
     <div className={`productsGrid ${isSingleItem ? 'singleItem' : ''}`}>
       <div className="headline">
@@ -24,11 +30,16 @@ function ProductGrid({ title, items }) {
       
       <div className={`handpickA ${isSingleItem ? 'singleItemGrid' : ''}`}>
         {items.map((item, index) => (
-          <div className={`handpickGrid ${isSingleItem ? 'singleItemGrid' : ''}`} key={item.id || index}>
+          <div 
+            className={`handpickGrid ${isSingleItem ? 'singleItemGrid' : ''}`} 
+            key={item.id || index}
+            onClick={() => handleProductClick(item)}
+          >
             <div className="imageContainer">
               <img className='gamePhoto' src={item.image} alt={item.alt || 'Product image'}/>
             </div>
             <p className="productName">{item.name}</p>
+            {item.price && <p className="productPrice">${item.price.toFixed(2)}</p>}
           </div>
         ))}
       </div>
