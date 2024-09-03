@@ -48,9 +48,9 @@ h2 {
   transition: transform 0.2s;
 }
 
-/* .handpickGrid:hover {
+.handpickGrid:hover {
   transform: translateY(-5px);
-} */
+}
 
 .productName {
   font-size: 12px;

@@ -2,6 +2,8 @@
   width: 100vw;
   height: 700px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-to-cart-button {
@@ -11,3 +13,12 @@
   border-radius: 30px;
   border: none;
 }
+
+.banner {
+  width: 100%;
+  height: auto;
+  margin: 0px 200px;
+}
+
+
+

@@ -36,7 +36,11 @@ function ProductPage() {
 
   return (
     <div className="product-page">
-      <h1>Product Details</h1>
+      <a href="#" className='banner'>link</a>
+      <ul>
+        <li>pant</li>
+        <li>opa</li>
+      </ul>
       <p>Product ID: {product.id}</p>
       <p>Name: {product.name}</p>
       <p>Price: ${product.price}</p>

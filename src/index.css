@@ -13,3 +13,7 @@ body {
   font-weight: 600;
   background-color: #E3E6E6;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
