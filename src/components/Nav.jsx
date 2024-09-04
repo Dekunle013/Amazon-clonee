@@ -1,5 +1,4 @@
 import React from 'react';
-import './Nav.css';
 
 function Nav() {
   const navItems = [
@@ -11,22 +10,27 @@ function Nav() {
   ];
 
   return (
-    <nav>
-      <div className="navChildA">
-        <div className="hamburgerAllDiv">
-          <a href="#">
+    <nav className="flex items-center w-full h-[7vh] bg-[#232F3E]">
+      <div className="flex items-center justify-start max-w-[1200px] h-full w-full pl-5">
+        <div className="flex items-center">
+          <a href="#" className="flex items-center">
             <img
-              className="hamburgerIcon"
+              className="w-5 filter invert mr-2"
               src="/hamburger-menu.svg"
               alt="hamburger-menu"
             />
-            <span>All</span>
+            <span className="text-white">All</span>
           </a>
         </div>
 
         {navItems.map((item, index) => (
-          <div key={index}>
-            <a href={item.href}>{item.label}</a>
+          <div
+            key={index}
+            className="flex items-center justify-center h-full text-sm font-semibold font-['Amazon_Ember'] px-3 py-2 transition duration-200 hover:bg-[#37475A] hover:border hover:border-[#E6E6E6] hover:rounded"
+          >
+            <a href={item.href} className="text-white">
+              {item.label}
+            </a>
           </div>
         ))}
       </div>
