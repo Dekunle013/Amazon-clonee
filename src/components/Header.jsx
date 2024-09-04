@@ -3,16 +3,19 @@ import './Header.css';
 
 function LeftSection() {
   return (
-    <div className="leftSection">
+    <div className="leftSection flex items-center justify-around w-[275px] h-[85%] pr-[5px] pl-[10px] text-white">
       <a href="#">
-        <img className='amazonLogo' src="/Amazon-logo.png" alt="Amazon Logo" />
+        <img
+          className="amazonLogo w-[120px] h-[40px] mx-[11px] py-[4px]"
+          src="/Amazon-logo.png"
+          alt="Amazon Logo"
+        />
       </a>
-      
-      <a href="#" className="delivery">
-        <img src="/Ei-location.svg.png" alt="" className="pinDrop" />
 
-        <span className="delNigeria">
-          Deliver to <span className="bold">Nigeria</span>
+      <a href="#" className="delivery flex items-center justify-center mx-[2px] my-[5px] px-[9px]">
+        <img src="/Ei-location.svg.png" alt="" className="pinDrop w-[30px] h-[30px] filter invert" />
+        <span className="delNigeria flex-1 text-sm text-gray-300">
+          Deliver to <span className="bold text-white font-bold">Nigeria</span>
         </span>
       </a>
     </div>
@@ -21,11 +24,24 @@ function LeftSection() {
 
 function MiddleSection() {
   return (
-    <div id="middleSection">
-      <button id="dropdownAll">All</button>
-      <input id="inputBar" type="text" placeholder="Search Amazon" />
-      <button id="searchButton">
-        <img id="searchIcon" src="/search.svg" alt="Search Icon" />
+    <div id="middleSection" className="flex flex-1">
+      <button
+        id="dropdownAll"
+        className="text-black h-[50px] w-[70px] rounded-l-lg bg-gray-300 hover:bg-gray-400 border-none"
+      >
+        All
+      </button>
+      <input
+        id="inputBar"
+        type="text"
+        placeholder="Search Amazon"
+        className="flex-grow h-[50px] border-none px-3 placeholder-opacity-50"
+      />
+      <button
+        id="searchButton"
+        className="flex justify-center items-center h-[50px] w-[50px] rounded-r-lg bg-yellow-500"
+      >
+        <img id="searchIcon" src="/search.svg" alt="Search Icon" className="w-[30px] h-[30px]" />
       </button>
     </div>
   );
@@ -37,20 +53,20 @@ function RightSection() {
   };
 
   return (
-    <div id="rightSection">
-      <div className="nationalityHive">
-        <a className="nationality" href="#">
-          <img className="usaFlag" src="/usa-flag.png" alt="USA" />
+    <div id="rightSection" className="flex w-[500px] items-center justify-evenly h-[85%] px-[20px] text-white">
+      <div className="nationalityHive flex justify-center items-center w-[15%] h-full relative">
+        <a className="nationality flex items-center justify-between" href="#">
+          <img className="usaFlag w-[25px] mr-[5px]" src="/usa-flag.png" alt="USA" />
           <span>EN</span>
         </a>
         <DropdownContent onLanguageChange={handleLanguageChange} />
       </div>
       <AccountHolder id="akkantHold" />
-      <a className="orders" href="">
+      <a className="orders flex flex-col justify-center items-center w-[20%] h-full" href="">
         <p className="smallParagraph">Return</p>
         <p className="mediumParagraph">& Orders</p>
       </a>
-      <a className="cartQuantity" href="">
+      <a className="cartQuantity flex justify-center flex-col items-center w-[20%] h-full" href="">
         <p className="mediumParagraph">Cart</p>
       </a>
     </div>
@@ -59,125 +75,67 @@ function RightSection() {
 
 function DropdownContent({ onLanguageChange }) {
   return (
-    <div className="dropdownContent">
-      <div className="contentFloat">
-        <span>
-          <span className="changeLang">Change language</span>
-          <span className="learnLang">
+    <div className="dropdownContent hidden flex-col w-[230px] rounded-lg absolute top-[50px] bg-white z-10 p-[10px]">
+      <div className="contentFloat flex flex-col">
+        <span className="flex font-medium">
+          <span className="changeLang text-sm cursor-pointer" onClick={() => onLanguageChange('EN')}>
+            Change language
+          </span>
+          <span className="learnLang text-sm text-blue-600 pl-2">
             <a href="#">Learn more</a>
           </span>
         </span>
-        <a className="eng" href="#">
+        <a className="eng border-b border-gray-200 text-gray-600 text-sm py-3">
           <span>
-            <input type="radio" className="radioInput" />
+            <input type="radio" className="radioInput mr-2" name="language" onChange={() => onLanguageChange('EN')} />
             English - EN
           </span>
         </a>
-        <a href="#">
+        <a className="fr border-b border-gray-200 text-gray-600 text-sm py-3">
           <span>
-            <input type="radio" className="radioInput" />
-            espanol -ES
+            <input type="radio" className="radioInput mr-2" name="language" onChange={() => onLanguageChange('FR')} />
+            French - FR
           </span>
         </a>
-        <a href="#">
+        <a className="es border-b border-gray-200 text-gray-600 text-sm py-3">
           <span>
-            <input type="radio" className="radioInput" />
-            عربي - AR
+            <input type="radio" className="radioInput mr-2" name="language" onChange={() => onLanguageChange('ES')} />
+            Spanish - ES
           </span>
         </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            Deutsch - DE
-          </span>
-        </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            עברית - HE
-          </span>
-        </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            한국인 - KO
-          </span>
-        </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            Português - PT
-          </span>
-        </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            中文 (简体) - ZH
-          </span>
-        </a>
-        <a href="#">
-          <span>
-            <input type="radio" className="radioInput" />
-            中文 (繁體) - ZH
-          </span>
-        </a>
-        <span className="changeMore">
-          <span className="changeLang">Change currency</span>
-          <span className="learnLang">
-            <a href="#">Learn more</a>
-          </span>
+        <span className="directive text-sm text-gray-600 pt-4 cursor-pointer">You are shopping on Amazon.com</span>
+        <span className="changeCounty flex justify-center mt-2">
+          <a href="#" className="text-blue-600 text-sm hover:underline">Change country/region.</a>
         </span>
       </div>
-      <div className="currentCurrency">
-        <span className="changeLang">$ - USD - US Dollar</span>
-        <span className="learnLang">
-          <a href="#">Change</a>
-        </span>
-      </div>
-      <span className="directive">
-        You are shopping on Amazon.com
-      </span>
-      <span className="changeCounty">
-        <a href="#">Change country/region.</a>
-      </span>
     </div>
   );
 }
 
 function AccountHolder() {
   return (
-    <div className="accountHolder">
+    <div className="accountHolder flex flex-col justify-center items-center h-full w-[40%] relative text-white">
       <a href="#">
         <p className="smallParagraph">Hello, sign in</p>
         <p className="mediumParagraph">Account & Lists</p>
       </a>
-      <div className="accountDropdown">
-        <div className="accountNav">
-          <a className="accountNavSign" href="#">Sign in</a>
-          <div>
-            <span>New customer?</span>
-            <a href="#">Start here.</a>
+      <div className="accountDropdown hidden flex-col rounded-lg absolute top-[47px] right-[-130px] w-[590px] bg-white z-10 p-[14px]">
+        <div className="flex flex-row">
+          <div className="dropdownLeft w-[200px] p-2">
+            <h3 className="text-lg font-bold">Your Lists</h3>
+            <ul>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Create a List</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Find a List</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Wish List</a></li>
+            </ul>
           </div>
-        </div>
-        <div className="accountSplit">
-          <div className="splitDivA">
-            <div>Your Lists</div>
-            <a href="#"><span>Create a list</span></a>
-            <a href="#"><span>Find a List or Registry</span></a>
-          </div>
-          <div className="splitDivB">
-            <div>Your Account</div>
-            <a href="#"><span>Account</span></a>
-            <a href="#"><span>Orders</span></a>
-            <a href="#"><span>Recommendations</span></a>
-            <a href="#"><span>Browsing History</span></a>
-            <a href="#"><span>Watchlist</span></a>
-            <a href="#"><span>Video Purchases & Rentals</span></a>
-            <a href="#"><span>Kindle Unlimited</span></a>
-            <a href="#"><span>Content & Devices</span></a>
-            <a href="#"><span>Subscribe & Save Items</span></a>
-            <a href="#"><span>Memberships & Subscriptions</span></a>
-            <a href="#"><span>Music Library</span></a>
+          <div className="dropdownRight w-[390px] p-2">
+            <h3 className="text-lg font-bold">Your Account</h3>
+            <ul>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Orders</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Recommendations</a></li>
+              <li><a href="#" className="text-sm text-gray-600 hover:underline">Your Subscribe & Save Items</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -187,7 +145,7 @@ function AccountHolder() {
 
 function Header() {
   return (
-    <header>
+    <header className="flex items-center justify-center w-full h-[11vh] bg-[#131921]">
       <LeftSection />
       <MiddleSection />
       <RightSection />
