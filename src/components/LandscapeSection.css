@@ -1,9 +1,9 @@
 .landscape {
-  /* border: 1px solid red; */
   position: relative;
   width: 97%;
   height: auto;
   background-color: #ffffff;
+  border: 2px solid gold;
   margin-bottom: 22px;
   display: flex;
   flex-direction: column;
@@ -12,109 +12,7 @@
 }
 
 .landscape-first {
-  margin-top: calc(100vh - 40px);
+  margin-top: calc(100vh - 90px);
   position: relative;
   z-index: 3;
-}
-
-.headlineA {
-  /* border: 1px solid blue; */
-  width: 100%;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  margin: 10px 0px 0px;
-}
-
-.headlineA span {
-  color: #0F1111;
-  font-size: 21px;
-}
-
-.landA {
-  /* border: 1px solid green; */
-  position: relative;
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  overflow-y: hidden;
-  margin: 0px 0px 14px;
-}
-
-
-.landA a {
-  /* border: 1px solid orange; */
-  width: auto;
-  height: inherit;
-  margin-right: 10px;
-  text-decoration: none;
-}
-
-.books {
-  /* width: calc(100% / 6); Adjust based on how many items you want to show */
-  width: auto;
-  height: auto;
-  max-width: 270px;
-  max-height: 200px;
-  vertical-align: middle;
-}
-
-.landscape-footer {
-  width: 100%;
-  height: auto;
-  /* border: 1px solid purple; */
-}
-
-.landscape-footer div {
-  /* width: inherit; */
-  /* height: au; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #DDD;
-  border-radius: 5px;
-  padding: 0px 20px;
-}
-
-.landscape-footer span {
-  font-size: 13px;
-}
-
-.landscape-footer div > a:nth-child(1) {
-  width: 50px;
-  height: 20px;
-  background-color: gold;
-}
-
-.landscape-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 16px;
-  font-size: 24px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 10;
-}
-
-.landscape:hover .landscape-nav {
-  opacity: 1;
-}
-
-.landscape-nav-left {
-  left: 10px;
-}
-
-.landscape-nav-right {
-  right: 10px;
-}
-
-.landscape-nav:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }

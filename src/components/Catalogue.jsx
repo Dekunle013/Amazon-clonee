@@ -57,7 +57,7 @@ function Catalogue() {
         )}
 
         <section className="firstGrid w-full h-auto flex items-center justify-center p-4 absolute top-1/3 left-0 right-0 z-2 overflow-visible">
-          <div className="productSectionA">
+          <div className="productSectionA grid grid-cols-4 grid-rows-2 gap-4 w-auto h-auto">
             <ProductGrid title="Gaming accessories" items={gamingAccessories} />
             <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
             <ProductGrid title="Refresh Your Space" items={refreshYourSpace} />

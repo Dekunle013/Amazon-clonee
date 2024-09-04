@@ -1,7 +1,11 @@
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import './LandscapeSection.css';
 
 const LandscapeContainer = ({ category, isFirst, isLast }) => {
+
+  const containerRef = useRef(null);
+
   const categories = {
     homeKitchen: {
       title: "Best Sellers in Home & Kitchen",
@@ -173,13 +177,21 @@ const LandscapeContainer = ({ category, isFirst, isLast }) => {
     },
   };
 
-if (category === 'landscape-footer') {
+ if (category === 'landscape-footer') {
     return (
-      <section className="landscape landscape-footer">
-        <div>
-        <span>See personalized recommendations</span>
-        <a href="#">Sign in</a>
-        <span>New customer? <a href="#">Start here.</a></span>
+      <section className="landscape landscape-footer flex flex-col items-center justify-center bg-gray-100 rounded-lg p-4 w-full h-auto">
+        <div className="flex flex-col">
+          <span className="text-xs">
+            See personalized recommendations
+          </span>
+
+          <a href="#" className="flex items-center justify-center text-sm bg-amber-600 w-50 h-5 rounded-full px-2 py-5 my-2">
+            Sign in
+          </a>
+
+          <span className="text-xs">
+            New customer? <a href="#" className="text-xs text-amber-600 font-bold">Start here.</a>
+          </span>
         </div>
       </section>
     );
@@ -192,28 +204,67 @@ if (category === 'landscape-footer') {
   }
 
   const { title, items } = categories[category];
-  
-  // Apply conditional classes for the first and last containers
-  const containerClass = `landscape${isFirst ? ' landscape-first' : ''}${isLast ? ' landscape-last' : ''}`;
 
+  const handleNextSlide = () => {
+    if (containerRef.current) {
+      const maxScrollLeft = containerRef.current.scrollWidth - containerRef.current.clientWidth;
+      if (containerRef.current.scrollLeft < maxScrollLeft) {
+        containerRef.current.scrollLeft += containerRef.current.clientWidth; // Scroll by container width
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (containerRef.current) {
+      if (containerRef.current.scrollLeft > 0) {
+        containerRef.current.scrollLeft -= containerRef.current.clientWidth; // Scroll by container width
+        setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+      }
+    }
+  };
+
+  // Apply conditional classes for the first and last containers
+  const containerClass = `landscape ${isFirst ? 'landscape-first' : ''} ${isLast ? 'landscape-last' : ''}`;
 
   return (
     <section className={containerClass}>
-      <div className="headlineA">
-        <span>{title}</span>
+
+      <button 
+        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white border-none p-4 text-2xl cursor-pointer opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"
+        onClick={handlePrevSlide}
+      >
+        &#8249;
+      </button>
+
+      <button 
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white border-none p-4 text-2xl cursor-pointer opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"
+        onClick={handleNextSlide}
+      >
+        &#8250;
+      </button>
+
+      <div className="headlineA w-full h-7.5 flex items-center mt-2.5">
+        <span className="text-2xl font-semibold text-gray-800">{title}</span>
       </div>
-      <div className="landA">
-        {items.map((item) => (
-          <a href="#" key={item.id}>
-            <img className="books" src={item.image} alt={item.title || "Product"} />
-          </a>
-        ))}
+
+      <div className="relative w-full overflow-hidden" ref={containerRef}>
+        <div className="flex transition-transform duration-500 space-x-4">
+          {items.map((item) => (
+            <a href="#" key={item.id} className="flex-shrink-0 w-auto">
+              <img
+                className="landscape-products w-full h-auto max-w-64 max-h-52 align-middle bg-amber-600"
+                src={item.image}
+                alt={item.title || "Product"}
+              />
+            </a>
+          ))}
+        </div>
       </div>
+
     </section>
   );
 };
-
-
 
 LandscapeContainer.propTypes = {
   category: PropTypes.oneOf([
@@ -223,7 +274,7 @@ LandscapeContainer.propTypes = {
     'topPicksForNigeria',
     'bestSellerInBooks',
     'videoGameWish',
-    'moviesTVsWish'
+    'moviesTVsWish',
   ]).isRequired,
   isFirst: PropTypes.bool,
   isLast: PropTypes.bool,
