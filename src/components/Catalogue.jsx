@@ -28,27 +28,27 @@ function Catalogue() {
   };
 
   return (
-    <main>
+    <main className="flex flex-col justify-center items-center">
       <div 
-        className="wallpaper"
+        className="w-full h-auto min-h-screen relative overflow-visible wallpaper"
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
         <img
-          className="backgroundWallpaper"
+          className="backgroundWallpaper w-full h-auto min-h-screen object-cover transition-opacity duration-1000 ease-in-out"
           src={wallpapers[currentWallpaperIndex]}
           alt={`Amazon Background Wallpaper ${currentWallpaperIndex + 1}`}
         />
         {isHovering && (
           <>
-            <button 
-              className="wallpaper-nav wallpaper-nav-left" 
+            <button
+              className="wallpaper-nav wallpaper-nav-left absolute top-30% transform translateY(-50%) bg-gray-500 text-white border-none p-4 text-3xl cursor-pointer opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-1 hover:bg-gray-700"
               onClick={() => changeWallpaper('prev')}
             >
               &#10094; {/* Left arrow */}
             </button>
-            <button 
-              className="wallpaper-nav wallpaper-nav-right" 
+            <button
+              className="wallpaper-nav wallpaper-nav-right absolute top-30% transform translateY(-50%) bg-gray-500 text-white border-none p-4 text-3xl cursor-pointer opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-1 hover:bg-gray-700"
               onClick={() => changeWallpaper('next')}
             >
               &#10095; {/* Right arrow */}
@@ -56,7 +56,7 @@ function Catalogue() {
           </>
         )}
 
-        <section className='firstGrid'>
+        <section className="firstGrid w-full h-auto flex items-center justify-center p-4 absolute top-1/3 left-0 right-0 z-2 overflow-visible">
           <div className="productSectionA">
             <ProductGrid title="Gaming accessories" items={gamingAccessories} />
             <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
@@ -73,8 +73,8 @@ function Catalogue() {
       <LandscapeContainer category="homeKitchen" isFirst />
       <LandscapeContainer category="sportsOutdoors" />
 
-      <section className='secondGrid'>
-        <div className="productSectionB">
+      <section className="secondGrid w-full p-4">
+        <div className="productSectionB grid grid-cols-4 w-full mx-auto">
           <ProductGrid title="Gaming Merchandise" items={gamingMerch} />
           <ProductGrid title="Shop activity trackers and smartwatches" items={smartWatches} />
           <ProductGrid title="Warm & welcoming decor" items={welcomeDecor} />
@@ -85,8 +85,8 @@ function Catalogue() {
       <LandscapeContainer category="beautyPersonalCare" />
       <LandscapeContainer category="topPicksForNigeria" />
 
-      <section className='secondGrid'>
-        <div className="productSectionB">
+      <section className="secondGrid w-full p-4">
+        <div className="productSectionB grid grid-cols-4 w-full mx-auto">
           <ProductGrid title="Gaming accessories" items={gamingAccessories} />
           <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
           {/* <ProductGrid title="Refresh Your space" items={refreshSpace} /> */}
@@ -107,8 +107,8 @@ function Catalogue() {
       <LandscapeContainer category="bestSellerInBooks" />
       <LandscapeContainer category="videoGameWish" />
 
-      <section className='secondGrid'>
-        <div className="productSectionB">
+      <section className="secondGrid w-full p-4">
+        <div className="productSectionB grid grid-cols-4 w-full mx-auto">
           <ProductGrid title="Gaming accessories" items={gamingAccessories} />
           <ProductGrid title="Shop deals in Fashion" items={fashionDeals} />
           <ProductGrid title="Deals in PCs" items={dealsInPCs} />
