@@ -24,8 +24,8 @@ function ProductGrid({ title, items }) {
   };
 
   return (
-    <div className={`productsGrid ${isSingleItem ? 'singleItem' : ''}`}>
-      <div className="headline">
+    <div className={`productsGrid flex flex-col justify-between w-[350px] h-auto p-[20px] bg-white box border ${isSingleItem ? 'singleItem' : ''}`}>
+      <div className="headline w-full mb-2.5">
         <h2>{title}</h2>
       </div>
       
@@ -36,17 +36,17 @@ function ProductGrid({ title, items }) {
             key={item.id || index}
             onClick={() => handleProductClick(item)}
           >
-            <div className="imageContainer">
-              <img className='gamePhoto' src={item.image} alt={item.alt || 'Product image'}/>
+            <div className="imageContainer w-full h-full pb-full relative overflow-hidden">
+              <img className="gamePhoto absolute top-0 left-0 w-full h-full object-cover" src={item.image} alt={item.alt || 'Product image'}/>
             </div>
-            <p className="productName">{item.name}</p>
-            {item.price && <p className="productPrice">${item.price.toFixed(2)}</p>}
+            <p className="productName text-sm text-gray-600 m-[5px]">{item.name}</p>
+            {/* {item.price && <p className="productPrice">${item.price.toFixed(2)}</p>} */}
           </div>
         ))}
       </div>
 
-      <div className="amazonGadgetLast">
-        <a className="seeAnchor" href="#">
+      <div className="amazonGadgetLast w-full m-[30px]">
+        <a className="seeAnchor text-sm font-medium no-underline" href="#">
           {getSeeMoreText()}
         </a>
       </div>
