@@ -11,11 +11,11 @@ function Nav() {
 
   return (
     <nav className="flex items-center w-full h-[7vh] bg-[#232F3E]">
-      <div className="flex items-center justify-start max-w-[1200px] h-full w-full pl-5">
-        <div className="flex items-center">
-          <a href="#" className="flex items-center">
+      <div className="flex items-center justify-start max-w-[1200px] h-full w-full pl-[1.2rem]">
+        <div className="flex justify-center items-center h-full text-[14px] font-semibold py-2 px-2.5 hover:border hover:border-gray-300 hover:rounded hover:bg-[#37475A]">
+          <a href="#" className="flex items-center align-center">
             <img
-              className="w-5 filter invert mr-2"
+              className="w-[20px] invert-[100%] mr-[8px]"
               src="/hamburger-menu.svg"
               alt="hamburger-menu"
             />

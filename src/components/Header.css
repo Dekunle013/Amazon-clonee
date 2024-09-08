@@ -7,8 +7,8 @@ header {
   background-color: #131921;
 }
 
-.leftSection {
-  /* background-color: gray; */
+/* .leftSection {
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -17,9 +17,9 @@ header {
   color: #fff;
   padding-right: 5px;
   padding-left: 10px;
-}
+} */
 
-.amazonLogo {
+/* .amazonLogo {
   display: flex;
   position: static;
   flex-shrink: 0;
@@ -27,58 +27,58 @@ header {
   height: 40px;
   margin: 0px 0px 0px 11px;
   padding: 4px 0px 0px;
-  /* object-fit: cover; */
-}
+  object-fit: cover;
+} */
 
-.delivery {
-  /* background-color: yellow; */
+/* .delivery {
+  background-color: yellow;
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   margin: 5px 2px 5px 0px;
   padding: 0 9px;
-}
+} */
 
-.pinDrop {
+/* .pinDrop {
   width: 30px;
   height: 30px;
   filter: invert(100%);
-}
+} */
 
-.delNigeria {
+/* .delNigeria {
   flex: 1;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 1px;
-  /* line-height: 14px; */
+  line-height: 14px;
   color: #ccc;
-}
+} */
 
-.bold {
+/* .bold {
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 1px;
   color: #fff;
-}
+} */
 
-.leftSection a:hover {
+/* .leftSection a:hover {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
   height: inherit;
   display: flex;
-}
+} */
 
 /* end of leftSection */
 
 
-#middleSection {
+/* #middleSection {
   display: flex;
   flex: 1;
-}
+} */
 
 
-#dropdownAll {
+/* #dropdownAll {
   color: #000;
   height: 50px;
   width: 70px;
@@ -86,17 +86,17 @@ header {
   border-bottom-left-radius: 5px;
   border: none;
   background-color: #dddddd;
-}
+} */
 
-#dropdownAll:hover {
+/* #dropdownAll:hover {
   background-color: #D4D4D4;
-}
+} */
 
-#inputBar {
+/* #inputBar {
   flex-grow: 1;
   height: 50px;
   border: none;
-}
+} */
 
 #inputBar::placeholder {
   padding-left: 15px;
@@ -105,7 +105,7 @@ header {
   font-size: 1rem;
 }
 
-#searchButton {
+/* #searchButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,60 +115,60 @@ header {
   border-bottom-right-radius: 5px;
   border: none;
   background-color: #FEBD69;
-}
+} */
 
-#searchIcon {
+/* #searchIcon {
   width: 30px;
   height: 30px;
-}
+} */
 
-#rightSection {
-  /* border: 1px solid red; */
+/* #rightSection {
+  border: 1px solid red;
   display: flex;
   width: 500px;
   align-items: center;
   justify-content: space-evenly;
   height: 85%;
   padding: 0px 20px;
-  /* background-color: gray; */
-}
+  background-color: gray;
+} */
 
-#rightSection a {
+/* #rightSection a {
   text-decoration: none;
   color: #fff;
-}
+} */
 
-.nationalityHive {
-  /* border: 1px solid green; */
-  /* position: relative; */
+/* .nationalityHive {
+  border: 1px solid green;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 15%;
   height: 100%;
-  /* background-color: pink; */
-}
+  background-color: pink;
+} */
 
-.nationality {
-  /* border: 1px solid green; */
+/* .nationality {
+  border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: auto;
   height: inherit;
-}
+} */
 
-.nationality span {
+/* .nationality span {
   font-size: 14px;
-}
+} */
 
-.usaFlag {
+/* .usaFlag {
   width: 25px;
   margin-right: 5px;
-}
+} */
 
 /* language dropdown stars */
-.dropdownContent {
+/* .dropdownContent {
   display: none;
   width: 230px;
   height: auto;
@@ -178,23 +178,22 @@ header {
   background-color: #fff;
   z-index: 1;
   padding: 10px;
-  /* color: auto; */
-}
+} */
 
-.contentFloat {
+/* .contentFloat {
   display: flex;
   flex-direction: column;
   width: auto;
   height: auto;
-}
+} */
 
-.contentFloat span {
+/* .contentFloat span {
   display: flex;
   font-weight: 500;
-}
+} */
 
-.changeLang{
-  /* border: 1px solid green; */
+/* .changeLang{
+  border: 1px solid green;
   width: auto;
   height: auto;
   display: flex;
@@ -203,10 +202,10 @@ header {
   font-weight: 400;
   color: #444444;
   cursor: pointer;
-}
+} */
 
-.learnLang a {
-  /* border: 1px solid green; */
+/* .learnLang a {
+  border: 1px solid green;
   width: auto;
   height: auto;
   padding-left: 10px;
@@ -215,13 +214,13 @@ header {
   font-size: 13px;
   font-weight: 400;
   color: #007185;
-}
+} */
 
-.radioInput {
+/* .radioInput {
   margin-right: 10px;
-}
+} */
 
-.eng{
+/* .eng{
   border-bottom: 1px solid #ececec;
   color: #444444;
   font-size: 13px;
@@ -229,17 +228,17 @@ header {
   white-space: nowrap;
   padding-top: 8px;
   padding-bottom: 12px;
-}
+} */
 
-.contentFloat a span{
+/* .contentFloat a span{
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   color: #444444;
   font-size: 13px;
   font-family: "Amazon Ember", Arial, sans-serif;
   padding: 8px 0px;
-}
+} */
 
 .changeMore {
   display: flex;
@@ -262,35 +261,35 @@ header {
   font-size: 13px;
 }
 
-.directive {
+/* .directive {
   color: #444444;
   font-size: 13px;
   font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: 400;
   padding-top: 15px;
   cursor: pointer;
-}
+} */
 
-.changeCounty {
-  /* border: 1px solid red; */
+/* .changeCounty {
+  border: 1px solid red;
   display: flex;
   justify-content: center;
   margin-top: 10px;
   width: auto;
   height: auto;
-}
+} */
 
-.changeCounty a {
+/* .changeCounty a {
   color: #0066C0;
   font-size: 13px;
   font-family: "Amazon Ember", Arial, sans-serif;
   font-weight: 400;
-}
+} */
 
-.changeCounty:hover {
+/* .changeCounty:hover {
   text-decoration: underline;
   text-decoration-color: orange;
-}
+} */
 
 .nationalityHive:hover .dropdownContent {
   display: flex;
@@ -298,7 +297,7 @@ header {
 }
 /* this is the end of language dropdown */
 
-.accountHolder {
+/* .accountHolder {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -307,11 +306,11 @@ header {
   width: 40%;
   position: relative;
   color: #fff;
-  /* background-color: lightblue; */
-}
+  background-color: lightblue;
+} */
 
 /* account Holder dropdown starts */
-.accountDropdown {
+/* .accountDropdown {
   border-radius: 4px;
   position: absolute;
   top: 47px;
@@ -319,10 +318,10 @@ header {
   width: 590px;
   height: auto;
   background-color: #fff;
-  display: none; /* Initially hidden */
+  display: none;
   z-index: 1;
   padding: 14px 14px 7px;
-}
+} */
 
 .accountNav {
   display: flex;
@@ -410,29 +409,40 @@ header {
   flex-direction: column;
 }
 
-.orders {
-  /* border: 1px solid green; */
+/* .orders {
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 20%;
   height: 100%;
-  /* background-color: lightpink; */
-}
+  background-color: lightpink;
+} */
 
-.cartQuantity {
-  /* border: 1px solid green; */
+/* .cartQuantity {
+  border: 1px solid green;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 20%;
   height: 100%;
-  /* background-color: lightblue; */
-}
+  background-color: lightblue;
+} */
 
 .nationalityHive:hover, .accountHolder:hover, .orders:hover, .cartQuantity:hover {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
+}
+
+.group:hover input[type="radio"] {
+  accent-color: #FFA500; /* Changes the radio button color on hover */
+}
+
+.custom-radio {
+  width: 100px; /* Adjust the size to your preference */
+  height: 60px; /* Adjust the size to your preference */
+  accent-color: #FFA500; /* Custom accent color */
+  transform: scale(1.5); /* Increases the size of the radio button */
 }

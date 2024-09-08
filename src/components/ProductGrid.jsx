@@ -25,28 +25,28 @@ function ProductGrid({ title, items }) {
 
   return (
     <div className={`productsGrid flex flex-col justify-between w-[350px] h-auto p-[20px] bg-white box border ${isSingleItem ? 'singleItem' : ''}`}>
-      <div className="headline w-full mb-2.5">
-        <h2>{title}</h2>
+      <div className="headline w-full mb-2.5 text-lg">
+        <h2 className=" text-[21px] m-0 ">{title}</h2>
       </div>
       
-      <div className={`handpickA ${isSingleItem ? 'singleItemGrid' : ''}`}>
+      <div className={`handpickA w-full grow grid grid-cols-2 grid-rows-2 gap-2.5 ${isSingleItem ? 'singleItemGrid' : ''}`}>
         {items.map((item, index) => (
           <div 
-            className={`handpickGrid ${isSingleItem ? 'singleItemGrid' : ''}`} 
+            className={`handpickGrid flex flex-col justify-between cursor-pointer ${isSingleItem ? 'singleItemGrid' : ''}`} 
             key={item.id || index}
             onClick={() => handleProductClick(item)}
           >
-            <div className="imageContainer w-full h-full pb-full relative overflow-hidden">
+            <div className="imageContainer w-full h-0 pb-[100%] relative overflow-hidden">
               <img className="gamePhoto absolute top-0 left-0 w-full h-full object-cover" src={item.image} alt={item.alt || 'Product image'}/>
             </div>
-            <p className="productName text-sm text-gray-600 m-[5px]">{item.name}</p>
+            <p className="productName text-[12px] text-black m-[5px]">{item.name}</p>
             {/* {item.price && <p className="productPrice">${item.price.toFixed(2)}</p>} */}
           </div>
         ))}
       </div>
 
-      <div className="amazonGadgetLast w-full m-[30px]">
-        <a className="seeAnchor text-sm font-medium no-underline" href="#">
+      <div className="amazonGadgetLast w-full mt-[30px]">
+        <a className="seeAnchor text-sm font-medium no-underline text-[#007185]" href="#">
           {getSeeMoreText()}
         </a>
       </div>

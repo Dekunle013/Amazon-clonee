@@ -1,23 +1,23 @@
-nav {
+/* nav {
   display: flex;
   align-items: center;
-  /* justify-content: center;  */
+  justify-content: center; 
   width: 100%;
   height: 7vh;
   background-color: #232F3E;
-}
+} */
 
-.navChildA {
-  max-width: 1200px;
-  height: 100%;
+/* .navChildA {
   display: flex;
   align-items: center;
   justify-content: start;
+  max-width: 1200px;
+    width: 100%;
+  height: 100%;
   padding-left: 1.2rem;
-  width: 100%;
-}
+} */
 
-.navChildA div {
+/* .navChildA div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,28 +27,28 @@ nav {
   font-family: "Amazon Ember", Arial, sans-serif;
   padding: 8px 12px;
   transition: background-color 0.2s ease;
-}
+} */
 
-.hamburgerAllDiv a {
+/* .hamburgerAllDiv a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.hamburgerIcon {
+/* .hamburgerIcon {
   width: 20px;
   filter: invert(100%);
   margin-right: 8px;
-}
+} */
 
-.navChildA div:hover {
+/* .navChildA div:hover {
   border: 1px solid #E6E6E6;
   border-radius: 2px;
-  background-color: #37475A; /* Add background color on hover */
-}
+  background-color: #37475A;
+} */
 
 /* Styling for all links */
-a {
+/* a {
   text-decoration: none;
   color: #fff;
-}
+} */
