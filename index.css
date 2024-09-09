@@ -17,3 +17,9 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Amazon Ember', sans-serif;
+  }
+}

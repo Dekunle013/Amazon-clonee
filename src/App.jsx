@@ -3,7 +3,8 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Catalogue from "./components/Catalogue";
 import Footer from "./components/Footer";
-import ProductPage from "./components/ProductPage"; // You'll need to create this component
+import CartPage from "./components/CartPage";
+import OrdersPage from "./components/OrdersPage";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <Header />
       <Nav />
       <Routes>
-        <Route path="/" element={<Catalogue />} />
-        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/home" element={<Catalogue />} />
+        <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       <Footer />
     </Router>

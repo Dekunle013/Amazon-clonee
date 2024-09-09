@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './Header.css';
 
@@ -5,13 +6,13 @@ function LeftSection() {
   return (
     <div className="leftSection flex items-center justify-around w-auto h-[100%] py-[1px] px-[20px] text-white bg-yellow">
 
-      <a href="#" className=" flex items-center justify-center w-[120px] h-[100px] px-[10px] py-[5px] hover:border hover:border-gray-300 hover:rounded-sm hover:h-[90%] hover:flex">
+      <Link to="/home" href="#" className=" flex items-center justify-center w-[120px] h-[100px] px-[10px] py-[5px] hover:border hover:border-gray-300 hover:rounded-sm hover:h-[90%] hover:flex">
         <img
           className="amazonLogo static shrink-0"
           src="/Amazon-logo.png"
           alt="Amazon Logo"
         />
-      </a>
+      </Link>
 
       <a href="#" className="delivery flex items-center justify-center w-[150px] h-[100px] px-[10px] py-[5px] hover:border hover:border-gray-300 hover:rounded-sm hover:h-[90%] hover:flex">
         <img src="/Ei-location.svg.png" alt="" className="pinDrop w-[30px] invert-[100%]" />
@@ -66,13 +67,14 @@ function RightSection() {
       </div>
       <AccountHolder id="akkantHold" />
 
-      <a className="orders flex flex-col justify-center items-center w-[20%] h-full" href="">
+      <Link to="/orders" className="orders flex flex-col justify-center items-center w-[20%] h-full" href="">
         <p className="smallParagraph">Return</p>
         <p className="mediumParagraph">& Orders</p>
-      </a>
-      <a className="cartQuantity flex justify-center flex-col items-center w-[20%] h-full" href="">
+      </Link>
+      <Link to="/cart" className="cartQuantity flex justify-center flex-col items-center w-[20%] h-full" href="">
         <p className="mediumParagraph">Cart</p>
-      </a>
+        
+      </Link>
     </div>
   );
 }
@@ -141,10 +143,12 @@ function DropdownContent({ onLanguageChange }) {
           </span>
         </span>
 
-        <div className="w-full h-auto flex">
-        <a href="#" className="w-[60%] flex text-[#444444]">$ - USD - US Dollar</a>
-        <a href="#" className="w-[40%] flex text-[#007185]">change</a>
+        <div className="w-full h-auto flex justify-center">
+        <a href="#" className="w-[80%] flex font-normal text-[#444444]">$ - USD - US Dollar</a>
+        <a href="#" className="w-[20%] flex font-normal text-[#007185] text-sm">change</a>
         </div>
+
+        <hr  className="w-[90%] m-auto py-[5px]" />
 
         <span className="directive text-sm text-gray-600 pt-[15px] cursor-pointer">You are shopping on Amazon.com</span>
         <span className="changeCounty flex justify-center mt-[10px] w-auto h-auto">
