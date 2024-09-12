@@ -11,7 +11,7 @@ const OrdersPage = () => {
           alt="Amazon Logo"
         />
       </Link>
-      <div className="border-[1px] border-solid border-white rounded-[10px] w-[296px] h-auto py-[20px] px-[26px] text-sm">
+      <div className="border-[1px] border-solid border-white rounded-[8px] w-[296px] h-auto py-[20px] px-[26px] text-sm">
         <h1 className="w-[100%] text-[28px] font-sm mt-[0px] mx-[0px] mb-[10px] pt-[0px] px-[0px] pb-[10px]">Sign in</h1>
         <form className="flex flex-col w-[100px] h-auto">
           <label htmlFor="email" className="text-[13px] pt-[0px] pr-[0px] pb-[2px] pl-[2px]">Email or mobile phone number:</label>
