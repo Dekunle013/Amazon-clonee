@@ -38,7 +38,7 @@ function MiddleSection() {
         id="inputBar"
         type="text"
         placeholder="Search Amazon"
-        className="flex-grow h-[50px] border-none px-3 placeholder-opacity-50"
+        className="flex-grow h-[50px] border-none focus:outline-none px-3 placeholder-opacity-50"
       />
 
       <button
